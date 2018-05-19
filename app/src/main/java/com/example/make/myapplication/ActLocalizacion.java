@@ -65,8 +65,6 @@ public class ActLocalizacion extends AppCompatActivity {
                 cargaMap(37.143051, -4.073414,"http://www.2654420-1.web-hosting.es/abadesstone.kml");
                 break;
         }
-
-
     }
 
     public void cargaMap(Double latitud, Double longitud, String rutaKML){
