@@ -47,10 +47,9 @@ public class ActLocalizacion extends AppCompatActivity {
         //cargaMap(37.143051, -4.073414,"http://www.2654420-1.web-hosting.es/abadesstone.kml");
         int i = getIntent().getIntExtra("fragment",-1);
 
-
         switch (i){
             case 0:
-                cargaMap(37.171537,-4.154954,"http://www.2654420-1.web-hosting.es/abadesministonerace.kml");
+                cargaMap(37.15637,-4.2067,"http://www.2654420-1.web-hosting.es/abadesstone.kml");
                 break;
             case 1:
                 cargaMap(37.171537,-4.154954,"http://www.2654420-1.web-hosting.es/abadesministonerace.kml");
@@ -62,7 +61,7 @@ public class ActLocalizacion extends AppCompatActivity {
                 cargaMap(37.171537,-4.154954,"http://www.2654420-1.web-hosting.es/abadesministonerace.kml");
                 break;
             default:
-                cargaMap(37.143051, -4.073414,"http://www.2654420-1.web-hosting.es/abadesstone.kml");
+                cargaMap(37.143051, -4.073414,"");
                 break;
         }
     }
@@ -92,10 +91,15 @@ public class ActLocalizacion extends AppCompatActivity {
 
         //File file = new File(("///android_asset/abadesstone.kml"));
 
+
         //File file = new File("file:///android_asset/abadesstone.kml");
         KmlDocument kmlDocument = new KmlDocument();
-        //kmlDocument.parseKMLFile(file);
-        kmlDocument.parseKMLUrl(rutaKML);
+        if(!rutaKML.equals(""))
+        {
+            //kmlDocument.parseKMLFile(file);
+            kmlDocument.parseKMLUrl(rutaKML);
+        }
+
 
         FolderOverlay kmlOverlay = (FolderOverlay)kmlDocument.mKmlRoot.buildOverlay(map, null, null, kmlDocument);
         map.getOverlays().add(kmlOverlay);

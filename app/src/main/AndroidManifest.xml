@@ -27,11 +27,6 @@
             android:label="@string/title_activity_menu__drawer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Inicio_drawer" />
-        <activity
-            android:name=".Pruebas"
-            android:label="@string/title_activity_pruebas"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".pruebaMenu" />
         <activity android:name=".Informacion" />
         <activity android:name=".ActLocalizacion" />
         <activity android:name=".LocDorsal" />

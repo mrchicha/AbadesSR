@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
@@ -72,7 +73,8 @@ public class MenuLateral extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+            //return true;
         }
 
         return super.onOptionsItemSelected(item);
@@ -161,6 +163,18 @@ public class MenuLateral extends AppCompatActivity
     public  void cargaMapMedia(View view){
         Intent i=new Intent(this,ActLocalizacion.class);
         i.putExtra("fragment",1);
+        startActivity(i);
+    }
+
+    public  void cargaMapMini(View view){
+        Intent i=new Intent(this,ActLocalizacion.class);
+        i.putExtra("fragment",2);
+        startActivity(i);
+    }
+
+    public  void cargaMapMedio(View view){
+        Intent i=new Intent(this,ActLocalizacion.class);
+        i.putExtra("fragment",3);
         startActivity(i);
     }
 

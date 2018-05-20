@@ -114,15 +114,8 @@ public class Menu_Drawer extends AppCompatActivity
 
     public void cargarPruebas(){
 
-            Intent i=new Intent(this,Pruebas.class);
-            startActivity(i);
-
-    }
-
-    public void cargarActividades(){
-
-        Intent i=new Intent(this,pruebaMenu.class);
-        startActivity(i);
+            //Intent i=new Intent(this,Pruebas.class);
+            //startActivity(i);
 
     }
 

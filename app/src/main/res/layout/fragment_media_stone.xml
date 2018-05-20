@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="top|right"
         android:layout_margin="@dimen/fab_margin"
-        android:onClick="cargaMap"
+        android:onClick="cargaMapMedia"
         app:backgroundTint="#cc1f1f"
         app:srcCompat="@drawable/streetmap" />
 </FrameLayout>
