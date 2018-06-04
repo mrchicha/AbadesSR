@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,15 +23,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Menu_Drawer"
+            android:name=".Activities.Menu_Drawer"
             android:label="@string/title_activity_menu__drawer"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Inicio_drawer" />
-        <activity android:name=".Informacion" />
-        <activity android:name=".ActLocalizacion" />
-        <activity android:name=".LocDorsal" />
+        <activity android:name=".Activities.Inicio_drawer" />
+        <activity android:name=".Activities.Informacion" />
+        <activity android:name=".Activities.ActLocalizacion" />
+        <activity android:name=".Activities.LocDorsal" />
         <activity
-            android:name=".MenuLateral"
+            android:name=".Activities.MenuLateral"
             android:label="@string/title_activity_menu_lateral"
             android:theme="@style/AppTheme"></activity>
     </application>
