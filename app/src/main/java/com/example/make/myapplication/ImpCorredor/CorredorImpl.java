@@ -31,13 +31,17 @@ public class CorredorImpl implements ICorredor{
 
         Connection con=null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
             con=DriverManager.getConnection(url,login,password);
             System.out.println("Conexión establecida.");
         } catch (SQLException ex) {
             System.out.println("Excepción en la conexión");
         } catch (ClassNotFoundException ex) {
             System.out.println("No se encuentra la clase");
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
         }
         return con;
     }
