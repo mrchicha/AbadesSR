@@ -6,10 +6,38 @@
     tools:context=".fragments.Clasificacion">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/txtcorredor"
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@android:color/white">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingBottom="0dp">
+
+            <TextView
+                android:id="@+id/txtcorredor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:text="@string/descripcion43"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:text="@string/perfil"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>
