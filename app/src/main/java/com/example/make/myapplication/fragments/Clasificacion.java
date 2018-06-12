@@ -1,13 +1,19 @@
 package com.example.make.myapplication.fragments;
 
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.make.myapplication.ImpCorredor.CorredorImpl;
 import com.example.make.myapplication.Modelo.Abadessr;
@@ -20,6 +26,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -28,10 +35,18 @@ import java.util.List;
 public class Clasificacion extends Fragment {
 
     private TextView corredor;
+    private ListView listViewCorredores;
     private DatabaseReference mAbades;
+    private DatabaseReference mCorredor;
     private FirebaseDatabase fAbades;
     private Query query;
     private DatabaseReference mAbadessr;
+    String datos="";
+    long i;
+    int in=0;
+    ArrayAdapter<Abadessr> adapter;
+    ArrayList<Abadessr> listaCorredores=new ArrayList<Abadessr>();
+    ArrayList<String> lista=new ArrayList<String>();
 
 
     //private CorredorImpl corredorImpl = new CorredorImpl();
@@ -47,23 +62,51 @@ public class Clasificacion extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        corredor = (TextView) getView().findViewById(R.id.txtcorredor);
+        //corredor = (TextView) getView().findViewById(R.id.txtcorredor);
+        listViewCorredores= (ListView) getView().findViewById(R.id.run);
+
 
         //Fireabase
 
-        fAbades = FirebaseDatabase.getInstance();
-        mAbades = fAbades.getReference("dorsal");
+       mAbades = FirebaseDatabase.getInstance().getReference("corredores");
 
+       //mCorredor.child("nombre").setValue("Juan jose");
+       // query = mAbades.orderByChild("corredor");
 
-
-        query = mAbades.orderByChild("dorsal").equalTo(1).limitToFirst(1);
-
-        query.addListenerForSingleValueEvent(new ValueEventListener() {
+        lista.add("1");lista.add("2");lista.add("3");
+        mAbades.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-               for( DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
-                   corredor.setText(dataSnapshot1.getValue().toString());
-               }
+                for (DataSnapshot data: dataSnapshot.getChildren()) {
+
+                    Abadessr abadessr = data.getValue(Abadessr.class);
+                    datos = "dni: " + abadessr.dni + ", dorsal " + abadessr.dorsal ;
+                    listaCorredores.add(abadessr);
+
+                    //i= dataSnapshot.getChildrenCount();
+                    //Log.i("elementos" ,dataSnapshot.getChildrenCount() +"");
+
+                }
+                    Log.i("array", listaCorredores.size()+"");
+                adapter=new ArrayAdapter<Abadessr>(getActivity().getApplicationContext(),
+                        R.layout.support_simple_spinner_dropdown_item,listaCorredores)
+                {
+
+                    @Override
+                    public View getView(int position, View convertView, ViewGroup parent) {
+                        View view =super.getView(position, convertView, parent);
+
+                        TextView textView=(TextView) view.findViewById(android.R.id.text1);
+
+                        /*YOUR CHOICE OF COLOR*/
+                        textView.setTextColor(Color.BLUE);
+
+                        return view;
+                    }
+                };
+
+                listViewCorredores.setAdapter(adapter);
+
             }
 
             @Override
@@ -72,7 +115,15 @@ public class Clasificacion extends Fragment {
             }
         });
 
+        listViewCorredores.setOnItemClickListener(new AdapterView.OnItemClickListener(){
 
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
+
+                Toast.makeText(getContext(), "Clasificado Nº:  " + (position +1), Toast.LENGTH_SHORT).show();
+            }
+
+        });
 
     }
 }

@@ -1,8 +1,6 @@
 package com.example.make.myapplication.Modelo;
 
-import com.google.firebase.database.IgnoreExtraProperties;
 
-@IgnoreExtraProperties
 public class Abadessr {
 
     public String dorsal;
@@ -12,8 +10,14 @@ public class Abadessr {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
     }
 
-    public Abadessr(String dorsal, String dni) {
+    public Abadessr(String dni, String dorsal) {
         this.dorsal = dorsal;
         this.dni = dni;
+    }
+
+    @Override
+    public String toString() {
+        return "Dorsal '" + dorsal + '\'' +
+                ", dni '" + dni + '\'';
     }
 }
