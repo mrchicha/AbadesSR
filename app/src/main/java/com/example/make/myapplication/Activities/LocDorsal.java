@@ -57,7 +57,7 @@ public class LocDorsal extends AppCompatActivity {
         mapController = map.getController();
         map.setBuiltInZoomControls(true);
         map.setMultiTouchControls(true);
-        mapController.setZoom(12);
+        mapController.setZoom(14);
 
         //GeoPoint startPoint = new GeoPoint(37.143051, -4.073414);
         //mapController.setCenter(startPoint);
@@ -69,12 +69,16 @@ public class LocDorsal extends AppCompatActivity {
 
     }
 
+    // Método que recibe una localización y pasa la latitud y la longitud a otro método
+    // que pinta el punto de ubicación
     public void actualizarUbicacion(Location location) {
         if (location != null) {
             agregarMarker(location.getLatitude(), location.getLongitude());
         } else agregarMarker(37.143051, -4.073414);
     }
 
+    // Método que recibe una latitud y una longitud y crea un geopoint
+    // centra el mapa en el geopoint y determina las opciones del overlay del mapa
     public void agregarMarker(Double lat, Double lon) {
         GeoPoint startPoint = new GeoPoint(lat, lon);
         mapController.setCenter(startPoint);
@@ -84,6 +88,8 @@ public class LocDorsal extends AppCompatActivity {
         map.getOverlays().add(startMarker);
     }
 
+    // Listener que detecta cuando cambia la ubicación y si es así llama al método que
+    // actualiza la ubicación
     LocationListener locationListener = new LocationListener() {
         @Override
         public void onLocationChanged(Location location) {
@@ -106,6 +112,8 @@ public class LocDorsal extends AppCompatActivity {
         }
     };
 
+    // Método que comprueba los permisos de ubicación y si los tiene le pide al usuario
+    // activarlos
     public void ubicacion() {
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
@@ -115,10 +123,16 @@ public class LocDorsal extends AppCompatActivity {
             return;
         }
 
+        // Definición e instancia del objeto location manager
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-        Log.i("ubicacion",location.getLatitude() + " " + location.getLongitude());
+        //Log.i("ubicacion",location.getLatitude() + " " + location.getLongitude());
+
+        // Llama al método de actualizar la ubicación con el objeto location
         actualizarUbicacion(location);
+
+        // Pide la actualización de la ubicación al objeto location manager cada 20 segundos, con 2 metros de distancia mínima
+        // y usando el listener del location manager
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,20000,2,locationListener);
     }
 

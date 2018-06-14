@@ -32,8 +32,9 @@ public class CorredorImpl implements ICorredor{
         Connection con=null;
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-            con=DriverManager.getConnection(url,login,password);
+            con= (Connection) DriverManager.getConnection(url,login,password);
             System.out.println("Conexión establecida.");
+
         } catch (SQLException ex) {
             System.out.println("Excepción en la conexión");
         } catch (ClassNotFoundException ex) {

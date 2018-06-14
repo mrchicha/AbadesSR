@@ -103,7 +103,7 @@ public class MenuLateral extends AppCompatActivity
                 //fragmentmanager.beginTransaction().replace(R.id.contenedor,new MedioVertical()).commit();
                 break;
             case R.id.nav_actividades:
-                cambioFragment(new AbadesStoneRace(),"Abades Stone Race");
+                cargarInscripcion(null);
                 //fragmentmanager.beginTransaction().replace(R.id.contenedor,new AbadesStoneRace()).commit();
                 //cargarFotos();
                 break;
@@ -144,14 +144,40 @@ public class MenuLateral extends AppCompatActivity
         Uri uri = Uri.parse("https://www.cruzandolameta.es/ver/abades-stone-race-2017---536/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
-
     }
 
-    public void cargarFotos(){
-        Uri uri = Uri.parse("http://www.abadesstonerace.com/galeria-foto-y-videos/");
+    public void cargarAbadesPatrocinador(View v){
+        Uri uri = Uri.parse("http://www.abades.com/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
+    }
 
+    public void cargarMalaCaraPatrocinador(View v){
+        Uri uri = Uri.parse("https://malacaraclubrunning.blogspot.com/");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    public void cargarAyuntamientoPatrocinador(View v){
+        Uri uri = Uri.parse("http://www.aytoloja.org/ayuntamiento/telefonos.htm");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    public void cargarApoloPatrocinador(View v){
+        Uri uri = Uri.parse("https://www.mariscosapolo.com/contacto/");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+    public void cargarCocacolaPatrocinador(View v){
+        Uri uri = Uri.parse("https://www.cocacola.es/es/home/");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+    public void cargarPoweradePatrocinador(View v){
+        Uri uri = Uri.parse("https://www.powerade.com/");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
     }
 
     public  void cargaMapAbades(View view){
@@ -181,13 +207,16 @@ public class MenuLateral extends AppCompatActivity
 
         Intent i=new Intent(this,ActLocalizacion.class);
         startActivity(i);
-
     }
 
     public void cargarlocDorsal(){
 
         Intent i=new Intent(this,LocDorsal.class);
         startActivity(i);
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 }

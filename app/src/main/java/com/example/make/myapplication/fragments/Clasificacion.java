@@ -65,15 +65,16 @@ public class Clasificacion extends Fragment {
         //corredor = (TextView) getView().findViewById(R.id.txtcorredor);
         listViewCorredores= (ListView) getView().findViewById(R.id.run);
 
+        CorredorImpl corredor = new CorredorImpl();
+        corredor.SeleccionarPorID(1107);
 
         //Fireabase
 
        mAbades = FirebaseDatabase.getInstance().getReference("corredores");
 
        //mCorredor.child("nombre").setValue("Juan jose");
-       // query = mAbades.orderByChild("corredor");
+       query = mAbades.getRef().child("dorsal").equalTo("1");
 
-        lista.add("1");lista.add("2");lista.add("3");
         mAbades.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {

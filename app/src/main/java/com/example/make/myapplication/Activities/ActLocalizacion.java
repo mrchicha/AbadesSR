@@ -51,30 +51,30 @@ public class ActLocalizacion extends AppCompatActivity {
 
         switch (i){
             case 0:
-                cargaMap(37.15637,-4.2067,"http://www.2654420-1.web-hosting.es/abadesstone.kml");
+                cargaMap(37.15637,-4.2067,"http://www.2654420-1.web-hosting.es/abades433.kml", "Abades stone");
                 break;
             case 1:
-                cargaMap(37.171537,-4.154954,"http://www.2654420-1.web-hosting.es/abadesministonerace.kml");
+                cargaMap( 37.160249, -4.189244,"http://www.2654420-1.web-hosting.es/mediastone.kml", "Media stone");
                 break;
             case 2:
-                cargaMap(37.171537,-4.154954,"http://www.2654420-1.web-hosting.es/abadesministonerace.kml");
+                cargaMap(37.171537,-4.154954,"http://www.2654420-1.web-hosting.es/abadesministonerace.kml", "Mini stone");
                 break;
             case 3:
-                cargaMap(37.171537,-4.154954,"http://www.2654420-1.web-hosting.es/abadesministonerace.kml");
+                cargaMap( 37.157919,-4.141789,"http://www.2654420-1.web-hosting.es/mediovertical.kml","KM vertical");
                 break;
             default:
-                cargaMap(37.143051, -4.073414,"");
+                cargaMap(37.143051, -4.073414,"", "");
                 break;
         }
     }
 
-    public void cargaMap(Double latitud, Double longitud, String rutaKML){
+    public void cargaMap(Double latitud, Double longitud, String rutaKML, String carrera){
 
 
         IMapController mapController = map.getController();
         map.setBuiltInZoomControls(true);
         map.setMultiTouchControls(true);
-        mapController.setZoom(16);
+        mapController.setZoom(14);
         GeoPoint startPoint = new GeoPoint(latitud, longitud);
         mapController.setCenter(startPoint);
 
@@ -83,7 +83,7 @@ public class ActLocalizacion extends AppCompatActivity {
         startMarker.setPosition(startPoint);
         startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
         //startMarker.setIcon(getResources().getDrawable(R.drawable.placeholder));
-        //startMarker.setTitle("Inicio carrera");
+        startMarker.setTitle("Inicio carrera " + carrera);
         map.getOverlays().add(startMarker);
 
 

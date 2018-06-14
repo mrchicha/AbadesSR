@@ -26,7 +26,7 @@
         <item
             android:id="@+id/nav_actividades"
             android:icon="@drawable/activities"
-            android:title="@string/Actividades" />
+            android:title="@string/Inscripciones" />
         <item
             android:id="@+id/nav_resultados"
             android:icon="@drawable/podium"
