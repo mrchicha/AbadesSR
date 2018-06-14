@@ -11,6 +11,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -32,6 +33,8 @@ public class LocDorsal extends AppCompatActivity {
     Double longitud;
     IMapController mapController;
     Marker startMarker;
+    GeoPoint startPoint;
+    static final int MI_RESULTADO = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,8 +68,6 @@ public class LocDorsal extends AppCompatActivity {
         //startMarker = new Marker(map);
 
         //startMarker.setPosition(startPoint);
-
-
     }
 
     // Método que recibe una localización y pasa la latitud y la longitud a otro método
@@ -80,11 +81,14 @@ public class LocDorsal extends AppCompatActivity {
     // Método que recibe una latitud y una longitud y crea un geopoint
     // centra el mapa en el geopoint y determina las opciones del overlay del mapa
     public void agregarMarker(Double lat, Double lon) {
-        GeoPoint startPoint = new GeoPoint(lat, lon);
+        startPoint = new GeoPoint(lat, lon);
+
+       //startPoint.setCoords(lat, lon);
         mapController.setCenter(startPoint);
         startMarker = new Marker(map);
         startMarker.setPosition(startPoint);
         startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
+        map.getOverlay().clear();
         map.getOverlays().add(startMarker);
     }
 
@@ -93,6 +97,7 @@ public class LocDorsal extends AppCompatActivity {
     LocationListener locationListener = new LocationListener() {
         @Override
         public void onLocationChanged(Location location) {
+
             actualizarUbicacion(location);
         }
 
@@ -112,14 +117,37 @@ public class LocDorsal extends AppCompatActivity {
         }
     };
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        //super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode){
+            case MI_RESULTADO: {
+
+                if(grantResults.length > 0 && grantResults[0]==PackageManager.PERMISSION_GRANTED){
+                    //permiso concedido
+
+                }
+                else {
+                    //permiso denegado
+                }
+
+                return;
+            }
+        }
+    }
+
     // Método que comprueba los permisos de ubicación y si los tiene le pide al usuario
     // activarlos
     public void ubicacion() {
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED &&
-                ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
-                        != PackageManager.PERMISSION_GRANTED) {
+                != PackageManager.PERMISSION_GRANTED ) {
+            if(ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.ACCESS_FINE_LOCATION)){
+
+            }
+            else{
+                ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, MI_RESULTADO);
+            }
             return;
         }
 
@@ -133,7 +161,7 @@ public class LocDorsal extends AppCompatActivity {
 
         // Pide la actualización de la ubicación al objeto location manager cada 20 segundos, con 2 metros de distancia mínima
         // y usando el listener del location manager
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,20000,2,locationListener);
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,3000,2,locationListener);
     }
 
     public void onResume(){

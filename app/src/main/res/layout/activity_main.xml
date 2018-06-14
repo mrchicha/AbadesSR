@@ -11,18 +11,16 @@
     <ImageView
         android:id="@+id/imgvLogo"
         android:layout_width="match_parent"
-        android:layout_height="265dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="221dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/abades" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -31,21 +29,20 @@
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="28dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.527" />
+        app:layout_constraintTop_toBottomOf="@+id/imgvLogo" />
 
     <ImageView
         android:id="@+id/imageView14"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="464dp"
+        android:adjustViewBounds="false"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/abadesintro" />
 </LinearLayout>

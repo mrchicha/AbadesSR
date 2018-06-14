@@ -109,6 +109,8 @@ public class ActLocalizacion extends AppCompatActivity {
         map.invalidate();
     }
 
+
+
     public void onResume(){
         super.onResume();
         //this will refresh the osmdroid configuration on resuming.
