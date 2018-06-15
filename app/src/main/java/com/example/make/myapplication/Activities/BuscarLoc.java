@@ -60,9 +60,11 @@ public class BuscarLoc extends AppCompatActivity {
 
         map = (MapView) findViewById(R.id.map);
         map.setTileSource(TileSourceFactory.OpenTopo);
-        //cargaMap(37.143051, -4.073414,"http://www.2654420-1.web-hosting.es/abadesstone.kml");
+
+        // Dato que recibimos para determinar desde donde se llama al Activity
         int i = getIntent().getIntExtra("fragment",-1);
 
+        // En función de donde venga la petición ejecuta un método con los parámetros correspondientes
         switch (i){
             case 0:
                 cargaMap(37.15637,-4.2067,"http://www.2654420-1.web-hosting.es/abades433.kml", "Inicio Abades stone");
@@ -79,12 +81,6 @@ public class BuscarLoc extends AppCompatActivity {
             default:
 
                 pedirDorsal();
-
-
-
-
-
-
                 break;
         }
     }
@@ -103,6 +99,7 @@ public class BuscarLoc extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
 
                         try {
+
                             Corredor corredor = corredorDorsal(response);
                             Double lon = Double.parseDouble(corredor.getLongitud());
                             Double lat = Double.parseDouble(corredor.getLatitud());
@@ -122,8 +119,6 @@ public class BuscarLoc extends AppCompatActivity {
                 }
         );
         requestQueue.add(jsArrayRequest);
-
-
     }
 
     public void cargaMap(Double latitud, Double longitud, String rutaKML, String datoPunto){
@@ -166,6 +161,7 @@ public class BuscarLoc extends AppCompatActivity {
 
     }
 
+    // Método que pide un dorsal y lo pasa como parámetro al método que lo busca en la base de datos
     public void pedirDorsal(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Indique el dorsal que quiere localizar");

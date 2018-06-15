@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +22,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.make.myapplication.Componentes.Category;
+import com.example.make.myapplication.Componentes.ListViewAdapter;
 import com.example.make.myapplication.Modelo.Abadessr;
 import com.example.make.myapplication.Modelo.Corredor;
 import com.example.make.myapplication.R;
@@ -43,12 +46,16 @@ import java.util.ArrayList;
 public class Clasificacion extends Fragment {
 
     private ListView listViewCorredores;
+    private ListViewAdapter listViewAdapter;
+    private ArrayList<Category> Arraycategory = new ArrayList<Category>();
 
     private Corredor corredor;
     private RequestQueue requestQueue;
     private ArrayAdapter<Corredor> adapter;
     private ArrayList<Corredor> listaClasificados = new ArrayList<>();
-    private ArrayList<String> lista = new ArrayList<String>();
+    private ArrayList<String> posiciones = new ArrayList<>();
+    private ArrayList<String> dorsales = new ArrayList<>();
+    private ArrayList<String> nombres = new ArrayList<>();
 
 
 
@@ -65,8 +72,8 @@ public class Clasificacion extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        listViewCorredores= (ListView) getView().findViewById(R.id.run);
-
+        listViewCorredores = getView().findViewById(R.id.run);
+        /*
         listViewCorredores.setOnItemClickListener(new AdapterView.OnItemClickListener(){
 
             @Override
@@ -76,9 +83,8 @@ public class Clasificacion extends Fragment {
             }
 
         });
-
+        */
         peticionJson();
-
 
     }
 
@@ -100,7 +106,6 @@ public class Clasificacion extends Fragment {
                             JSONArray jsonArray = response.getJSONArray("corredores");
 
                             //obtiene un objeto json de un arrayjson
-
                             listaClasificados = listaCorredores(jsonArray);
 
                             //relleno con un objeto json
@@ -108,7 +113,8 @@ public class Clasificacion extends Fragment {
                             //listaClasificados.add(corredorDorsal(jsonArray.getJSONObject(2)));
 
                             //listaClasificados.add(corredorDorsal(response));
-                            relleno(listaClasificados);
+                            //relleno(listaClasificados);
+                            rellenoArrays(listaClasificados);
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -156,6 +162,21 @@ public class Clasificacion extends Fragment {
         return corredores;
     }
 
+    public void rellenoArrays(ArrayList<Corredor> corredores){
+
+        for(Corredor c : corredores){
+            Category category = new Category(
+                    "Clasificado nº: " + c.getClasificacion(),
+                    "Dorsal: " + c.getDorsal(),
+                    "Nombre: " + c.getNombre() + " " + c.getApellidos());
+            Arraycategory.add(category);
+        }
+
+        listViewAdapter = new ListViewAdapter(getActivity(),Arraycategory );
+        listViewCorredores.setAdapter(listViewAdapter);
+
+
+    }
     public Corredor corredorDorsal(JSONObject jsonObject) throws JSONException {
         Corredor corredor = new Corredor();
 
