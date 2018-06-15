@@ -49,11 +49,21 @@
             <item
                 android:id="@+id/nav_loc_dorsal"
                 android:icon="@drawable/locdorsal"
-                android:title="@string/Localizar_dorsal" />
+                android:title="@string/Activar_localizacion" />
             <item
                 android:id="@+id/nav_loc"
                 android:icon="@drawable/activarloc"
-                android:title="@string/Activar_localizacion" />
+                android:title="@string/Localizar_dorsal" />
+        </menu>
+    </item>
+
+    <item android:title="@string/Menu_Salir">
+        <menu>
+            <item
+                android:id="@+id/salir"
+                android:icon="@drawable/cancelar"
+                android:title="@string/Salir" />
+
         </menu>
     </item>
 

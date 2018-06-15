@@ -22,14 +22,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Activities.Menu_Drawer"
-            android:label="@string/title_activity_menu__drawer"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activities.Inicio_drawer" />
         <activity android:name=".Activities.Informacion" />
-        <activity android:name=".Activities.ActLocalizacion" />
-        <activity android:name=".Activities.LocDorsal" />
+        <activity android:name=".Activities.BuscarLoc" />
+        <activity android:name=".Activities.ActivarLoc" />
         <activity
             android:name=".Activities.MenuLateral"
             android:label="@string/title_activity_menu_lateral"

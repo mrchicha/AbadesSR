@@ -78,65 +78,7 @@ public class Clasificacion extends Fragment {
         });
 
         peticionJson();
-        /*
-        //Fireabase
 
-       mAbades = FirebaseDatabase.getInstance().getReference("corredores");
-
-       //mCorredor.child("nombre").setValue("Juan jose");
-       query = mAbades.getRef().child("dorsal").equalTo("1");
-
-        mAbades.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot data: dataSnapshot.getChildren()) {
-
-                    Abadessr abadessr = data.getValue(Abadessr.class);
-                    datos = "dni: " + abadessr.dni + ", dorsal " + abadessr.dorsal ;
-                    listaCorredores.add(abadessr);
-
-                    //i= dataSnapshot.getChildrenCount();
-                    //Log.i("elementos" ,dataSnapshot.getChildrenCount() +"");
-
-                }
-                    Log.i("array", listaCorredores.size()+"");
-                adapter=new ArrayAdapter<Abadessr>(getActivity().getApplicationContext(),
-                        R.layout.support_simple_spinner_dropdown_item,listaCorredores)
-                {
-
-                    @Override
-                    public View getView(int position, View convertView, ViewGroup parent) {
-                        View view =super.getView(position, convertView, parent);
-
-                        TextView textView=(TextView) view.findViewById(android.R.id.text1);
-
-
-                        textView.setTextColor(Color.BLUE);
-
-                        return view;
-                    }
-                };
-
-                listViewCorredores.setAdapter(adapter);
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
-        listViewCorredores.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-
-            @Override
-            public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
-
-                Toast.makeText(getContext(), "Clasificado Nº:  " + (position +1), Toast.LENGTH_SHORT).show();
-            }
-
-        });
-        */
 
     }
 

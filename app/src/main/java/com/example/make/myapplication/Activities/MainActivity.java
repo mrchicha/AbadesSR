@@ -1,5 +1,7 @@
 package com.example.make.myapplication.Activities;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -50,5 +52,10 @@ public class MainActivity extends AppCompatActivity {
         Intent i=new Intent(this,MenuLateral.class);
         startActivity(i);
         finish();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 }

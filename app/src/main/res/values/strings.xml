@@ -21,6 +21,9 @@
     <string name="Localizar_dorsal">Localizar dorsal</string>
     <string name="Activar_localizacion">Activar localización</string>
 
+    <string name="Menu_Salir">Otras opciones</string>
+    <string name="Salir">Salir de la aplicación</string>
+
     <string name="Abades">Abades Stone 43km</string>
     <string name="Media">Media Stone 21km</string>
     <string name="Mini">Mini Stone 13km</string>
@@ -29,8 +32,12 @@
     <string name="opcion1">opcion1</string>
     <string name="opcion2">opcion2</string>
     <string name="opcion3">opcion3</string>
-    <string name="title_activity_scrolling_prueba">ScrollingActivityPrueba</string>
+
+    <string name="menugps">Opciones GPS</string>
     <string name="menu">Menú</string>
+
+    <string name="title_activity_scrolling_prueba">ScrollingActivityPrueba</string>
+
     <string name="avituallamientos">Avituallamientos</string>
     <string name="perfil">PERFIL DEL RECORRIDO:</string>
     <string name="descripcion43">
@@ -208,7 +215,7 @@
         "Una vez terminado un evento deportivo es necesario realizar un análisis y extraer conclusiones de cómo ha salido todo. Esta tarea corresponde a los directivos organizadores que tras estudiar el evento deciden si ha sido positiva la realización del mismo y presentan nuevas ideas y propuestas para que las próximas ediciones sean de mayor calidad organizativa y también deportiva.\n\n"
         "Este proceso de mejora se tendrá muy presente dentro de la organización de la Carrera de Montaña de Loja.\n\n"
     </string>
-    <string name="menugps">Opciones GPS</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

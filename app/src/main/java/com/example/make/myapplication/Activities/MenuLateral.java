@@ -1,5 +1,7 @@
 package com.example.make.myapplication.Activities;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -52,7 +54,8 @@ public class MenuLateral extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            dialog();
+            //super.onBackPressed();
         }
     }
 
@@ -125,6 +128,9 @@ public class MenuLateral extends AppCompatActivity
             case R.id.nav_loc_dorsal:
                 cargarlocDorsal();
                 break;
+            case R.id.salir:
+                dialog();
+                break;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -181,37 +187,37 @@ public class MenuLateral extends AppCompatActivity
     }
 
     public  void cargaMapAbades(View view){
-        Intent i=new Intent(this,ActLocalizacion.class);
+        Intent i=new Intent(this,BuscarLoc.class);
         i.putExtra("fragment",0);
         startActivity(i);
     }
     public  void cargaMapMedia(View view){
-        Intent i=new Intent(this,ActLocalizacion.class);
+        Intent i=new Intent(this,BuscarLoc.class);
         i.putExtra("fragment",1);
         startActivity(i);
     }
 
     public  void cargaMapMini(View view){
-        Intent i=new Intent(this,ActLocalizacion.class);
+        Intent i=new Intent(this,BuscarLoc.class);
         i.putExtra("fragment",2);
         startActivity(i);
     }
 
     public  void cargaMapMedio(View view){
-        Intent i=new Intent(this,ActLocalizacion.class);
+        Intent i=new Intent(this,BuscarLoc.class);
         i.putExtra("fragment",3);
         startActivity(i);
     }
 
     public void cargarActLocalizacion(){
 
-        Intent i=new Intent(this,ActLocalizacion.class);
+        Intent i=new Intent(this,BuscarLoc.class);
         startActivity(i);
     }
 
     public void cargarlocDorsal(){
 
-        Intent i=new Intent(this,LocDorsal.class);
+        Intent i=new Intent(this,ActivarLoc.class);
         startActivity(i);
     }
 
@@ -224,4 +230,44 @@ public class MenuLateral extends AppCompatActivity
     protected void onPause() {
         super.onPause();
     }
+
+    public void dialog() {
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(
+                this);
+
+        // Setting Dialog Title
+        alertDialog.setTitle("¿Salir de la aplicación?");
+
+        // Setting Dialog Message
+        alertDialog.setMessage("¿Está seguro de que desea salir de la aplicación?");
+
+        // Setting Positive "Yes" Button
+        alertDialog.setPositiveButton("YES",
+
+                new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+
+                    }
+                });
+
+        // Setting Negative "NO" Button
+        alertDialog.setNegativeButton("NO",
+
+                new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Write your code here to invoke NO event
+                        dialog.cancel();
+                    }
+                });
+
+        // Showing Alert Message
+
+        alertDialog.show();
+
+    }
+
 }
