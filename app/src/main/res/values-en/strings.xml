@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Abades Stone Race</string>
+    <string name="title_activity_menu__drawer">Abades Stone Race</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="cargando">Loading...</string>
+    <string name="edicion">Welcome to the 5th edition!</string>
+    <string name="incripciones">Registration is open</string>
+    <string name="incribir">Register for the race</string>
+
+    <string name="Pruebas">Races</string>
+    <string name="Inscripciones">Registration</string>
+    <string name="Resultados">Ranking</string>
+    <string name="Patrocinadores">Sponsors</string>
+    <string name="Patrocinadores_organizadores">Organizers and sponsors</string>
+    <string name="informacion">Information</string>
+
+    <string name="Menu_Localizacion">Localization</string>
+    <string name="Localizar_dorsal">Locate dorsal</string>
+    <string name="Activar_localizacion">Activate location</string>
+    <string name="posicion_actual">Current dorsal position:</string>
+
+    <string name="dorsal_localizar">Enter the dorsal you want to locate</string>
+    <string name="dorsal_ubicacion">Enter your dorsal</string>
+
+    <string name="Menu_Salir">Other settings</string>
+    <string name="Salir">Exit the application</string>
+
+    <string name="inicio">Home</string>
+    <string name="Abades">Abades Stone race 43km</string>
+    <string name="Media">Media Stone race 21km</string>
+    <string name="Mini">Mini Stone race 13km</string>
+    <string name="Vertical">1/2 KM vertical 1,8km</string>
+
+    <string name="opcion1">option1</string>
+    <string name="opcion2">option2</string>
+    <string name="opcion3">option3</string>
+
+    <string name="menugps">Settings GPS</string>
+    <string name="menu">Menu</string>
+
+    <string name="gps_inactvo">GPS is not active</string>
+    <string name="activar_gps">Activate GPS from the menu</string>
+
+    <string name="title_activity_scrolling_prueba">ScrollingActivityPrueba</string>
+
+    <string name="si">YES</string>
+    <string name="no">NO</string>
+    <string name="aceptar">Accept</string>
+    <string name="cancelar">Cancel</string>
+    <string name="mensajesalir">Would you like to leave the application?</string>
+    <string name="confirmarsalir">Are you sure you want to leave the application?</string>
+    <string name="nodorsal">The selected dorsal is not sharing its location</string>
+    <string name="nohaydorsal">The dorsal selected does not exist</string>
+
+    <string name="clasificado">Ranked nº:</string>
+    <string name="dorsal">Dorsal:</string>
+    <string name="nombre">Name:</string>
+
+    <string name="avituallamientos">Provisionings</string>
+    <string name="perfil">ROUTE OUTLINE:</string>
+    <string name="descripcion43">
+        "DESCRIPTION STONE RACE:\n\n"
+        "Distance: 43 km.\n"
+        "Technical difficulty: Medium – High\n"
+        "Environment: Sierra de Loja and Monte Hacho\n"
+        "Start: Abades Loja service area\n"
+        "Finish: Medina Lauxa Stadium\n"
+        "Accumulated positive elevation: 2.570 m\n"
+        "Upper elevation: 1614 m. Sierra de Loja\n"
+        "Registration fees:\n"
+        "Federated and Non-Federated: 25 €\n"
+    </string>
+    <string name="descripcion23">
+		"DESCRIPTION MEDIA RACE:\n\n"
+        "Distance: 23 km.\n"
+        "Technical difficulty: Medium – High\n"
+        "Environment: Sierra de Loja\n"
+        "Start: Abades Loja service area\n"
+        "Finish: Medina Lauxa Stadium\n"
+        "Accumulated positive elevation: 1.265 m\n"
+        "Upper elevation: 1500 m. Sierra de Loja\n"
+        "Registration fees:\n"
+        "Federated and Non-Federated: 18 €\n"
+    </string>
+    <string name="descripcion13">
+		"DESCRIPTION MINI STONE:\n\n"
+        "Distance: 13 km.\n"
+        "Technical difficulty: Low – Medium\n"
+        "Environment: Sierra de Loja\n"
+        "Start: Abades Loja service area\n"
+        "Finish: Medina Lauxa Stadium\n"
+        "Accumulated positive elevation:\n"
+        "Upper elevation: 1049 m. Sierra de Loja\n"
+        "Registration fees:\n"
+        "Federated and Non-Federated: 18 €\n"
+    </string>
+    <string name="descripcionmedio">
+		"DESCRIPTION 1/2 KM VERTICAL:\n\n"
+        "Distance: 1.8 km.\n"
+        "Technical difficulty: Medium\n"
+        "Environment: Sierra de Loja\n"
+        "Start: Abades Loja service area\n"
+        "Finish: Highest point.\n"
+        "Accumulated positive elevation: 485 m\n"
+        "Upper elevation: 1044 m. Sierra de Loja\n"
+        "Registration fees:\n"
+        "• Free with the inscription in any modality.\n"
+        "• Only for the Stone ½ Km Vertical: 5 €\n"
+    </string>
+    <string name="presentacion">
+        "RACE PRESENTATION\n\n"
+        "Taking advantage of the rural environment and the landscape in which the rural areas of the city of Loja are located and given the boom that mountain races are having, we want to give life to this project and to those that arise in this discipline.\n\n"
+		"Our goal is to promote this sport in two ways: One competitive with four courses: 41 km Stone Marathon, another 23 km Medium Stone, a short 13 km Mini Stone and the 1/2 Kilometer vertical. The other altruistic-ludic, since at the same time as the minitrail will be a mountain march (the march will not be competitive) using part of the route of the trail, as long as they do not hinder the passage of corridors and between both do not get stuck or an imminent danger is created among the participants. It will also have a tourist format, since the test will pass through different geographical points of the town where it is developed; extending the race approximately between 10 and 50 km and will inform all participants about our environment and other values of it.\n\n"
+        "The date of the race will be on November 4 and 5. It will be Saturday afternoon at 16.00 in which the vertical kilometer will be played and Sunday morning, from 8:30 to 17.30 that the arrival of the last participant of the longest race is estimated, depending on the weather and the different distances will be established schedules and organizational controls, both races and logistics, for the proper development of it.\n\n"
+        "To achieve these objectives, a correct organization and management of the event is necessary, and this involves controlling all the aspects that characterize it: marketing, logistics, the economic-legal part, the infrastructures both internal and external that are needed, the necessary technical staff, etc.\n\n"
+        "The experience of the previous editions and the involvement of our club together with the City Council of Loja allow us to organize this race with the maximum guarantees of success and with the almost absolute certainty that we will be able to foresee all the circumstances that surround it so that its development be as perfect as possible.\n\n"
+        "After this small contextualization we went on to detail the organizational aspects:\n\n"
+        "LOJA AND LA SIERRA DE LOJA\n\n"
+        "Loja is located in the western part of the province of Granada (Autonomous Community of Andalucía), forming part of the West Granada region and bordering the provinces of Málaga and Córdoba. It is located on foot to Highway A-92, Km. 192, (CN-342), main axis of communication of Andalucía, by which today most of the trips are made within our Autonomous Community, which allows from the capitals of more distant provinces do not spend more than three hours to get to the city.\n\n"
+        "The city of Loja with its more than 450 km2, have a diverse territory in landscape. Mountains, hills, mountains, banks, groves, rivers and fields constitute a natural and cultural mosaic that make up the structure of our city. These landscapes also house a rich living diversity, formed by a multitude of species of plants and animals that find here, in Loja, an ideal place to live and accompany us in the daily life. Do not forget the formidable structures and geological formations with which the creation gave this piece of the West Granada: karstic mountain ranges, meanders, ravines, streams, vegas etc ...\n\n"
+        "The mountain range of Loja, from whose viewpoints you can see panoramic views of the region, is the habitat of raptors, goat and wild cat or gallipato, an endemic species that can be seen in the Charco del Negro. It has numerous cavities, fractures and vertical caves in the rock (like the well-known Cueva Horadada), ideal for the practice of caving, adventure sport to which others like hiking or free flight with its two take-offs are added. It is also possible to visit the Wind Farm.\n\n"
+        "SPONSORS RACE\n\n"
+        "Their participation will be economic, in actions of the race or the exchange of material. All sponsors will be published on p. Web of the test, media and sponsored garments, you can also put your advertising on billboards, triptychs and trophies. In the event that a sponsor requests additional publicity for the day of the test, it will be with prior notice to the committee of the organization of the same.\n\n"
+        "The technical garment will be screen printed with the main sponsors of the test, Anagram of the test, etc.\n\n"
+        "REGISTRATIONS\n\n"
+
+        "a) Base Sports Open.\n\n"
+        "b) www. abadesstonerace.com, through bank gateway\n\n"
+        "c) A registration and closing date will be published in all the media that we will use to promote the race.\n\n"
+        "*NOTE: All the inscriptions will be accompanied by the bank receipt of the test entry and indicating in it the modality of participation march / race and the data that the organization deems appropriate.\n\n"
+        "INSURANCE OF THE RACE\n\n"
+        "The civil liability insurance for the race, insurance of runners and compulsory licenses for the race will be hired.\n\n"
+        "Security\n\n"
+        "Security will be established by Local Police, Civil Protection, City Council staff, Red Cross, health personnel and volunteers. Three emergency plans will be made that will be known to each of the members in charge of ensuring the safety of participants and passers-by of the event.\n\n"
+		"a) Evacuation emergency.\n"
+        "b) Medical assistance emergency.\n"
+        "c) Search emergency.\n"
+        "The emergency plans will be prepared jointly by all the volunteers and their professionals. Periodic meetings and assignments will be maintained.\n\n"
+        "COLLABORATORS IN THE EVENT OF THE RACE\n\n"
+        "As in the previous section (2.4), but only in the supplies, career control points, dangerous routes and conflicting crossings.\n\n"
+        "ACCOMMODATIONS\n\n"
+        "In the event that accommodations are needed for brokers, guests or other personnel who request it, we will provide for the hiring of pensions or hotels by others as close as possible to the test site at affordable prices.\n\n"
+        "PASS, DEPARTURE AND GOAL CONTROLS\n\n"
+        "It will be carried out by collaborating personnel, qualified personnel with official timing or chip. They will be located in strategic places.\n\n"
+        "There will be as many controls as the organization estimates.\n\n"
+        "PROVISIONING\n\n"
+        "They will be formed by voluntary personnel and provided by our collaborators. They will be assisted by two volunteers and located approximately every 5 km. They are interspersed in liquid and solid refreshments. The liquids will be provided with water and isotonic drink and the solid refreshments with fruits, chocolates, nuts, water, etc.\n\n"
+        "SHOWER AND HYGIENE\n\n"
+        "The showers, changing rooms and w.c of the Pabellón Alfeia will be available and if they were necessary for the volume we would also make available the locker rooms of the Municipal Stadium La Joya. In the zone of exit the toilets of the Abbots Service Area will be available.\n\n"
+        "MEDICAL SERVICE\n\n"
+        "There will be a medical service composed of two doctors and two ambulances during and after the test. During the test, it will attend to emergencies that entail a risk to the health of the participant and will certify the immediate withdrawal of the test from those who show signs of an anomaly in their health. Its location will be at strategic career points and will have permanent mobility by transport on quad, motorcycle or all terrain, we will also have a specialized company "
+        "Trophy for the first 3 classified in each category.\n\n"
+        "To be eligible for the award in the different categories, the necessary documentation will be requested to prove it, as a local absolute, you must have been born in the town or have been registered at least one year ago (DNI or official accreditation will be requested). demonstrate).\n\n"
+        "CLEANING THE ITINERARY.\n\n"
+        "When the last race participant passes through the first checkpoint or refreshment station (whichever comes first), all stalls will be dismantled step by step, as well as the marks we used to mark the itinerary to be followed by the participants until they reach the goal.\n\n"
+        "REGULATION\n\n"
+        "The regulations for the IV Mountain Race of Loja can be found at www.abadesstonerace.com\n\n"
+        "COMPETITION CATEGORIES\n\n"
+        "The participants will be divided into the following categories of Competition:\n"
+        "Cadet: 15, 16 and 17 years, that is, not reaching 18 years of reference year."
+        "Junior: 18, 19 and 20 years, that is, not reaching 21 years of reference year."
+        "Absolute: from 21 years of age the reference year.\n\n"
+        "Subcategories:"
+        "Promise: 21, 22 and 23 years, that is, they do not reach the reference year of 24 years.\n"
+        "Senior (from 24 to 39 years of age completed the year of the competition)."
+        "Veterans (from 40 to 50 completed the year of the competition)."
+        "Master's degree (from 51 onwards completed the year of the competition).\n\n"
+        "MAIN LOGISTICS OF THE SPORTS EVENT\n\n"
+        "The start and finish controls will be carried out by the company specialized in sports timing.\n\n"
+        "It will use one of the most modern technologies on the market, chip technology. The main objective is to provide the organizer with a fast, versatile and efficient timing system that allows obtaining the classifications of the event in real time.\n\n"
+        "The organization plans to use the Alfeia Multipurpose Pavilion of the population in Av. Tierno Galván to provide changing rooms and showers that participants can use comfortably, both in the pavilion and if necessary the Municipal Stadium La Joya. As parking the organization has the lots that are located on both sides of Av. Tierno Galván and will have entry and exit through streets outside the course of the race.\n\n"
+        "The organization will have numerous volunteers covering all the tasks necessary for the realization of this sporting event.\n\n"
+        "Tasks: delivery dorsals, refreshments, access control, music and photography services, animation ...\n\n"
+        "Finally, an exclusive blog of the IV Race of Mountain of Loja will be elaborated that will offer all the information of the race since Internet is the way of diffusion of more powerful information in the actuality and all sport event must have this tool to give quality to the same and open to as many people as possible.\n\n"
+        "SPONSORS AND COLLABORATORS\n\n"
+        "One of the sources of financing of sport and, above all, of sporting events is sponsorship. In this way to carry out an event of these characteristics it needs the help of certain sponsors that allow the event to become more viable economically and be a point of influence for people to conceive the race as a true event level with the backing of important sponsors that bet for that test and ultimately for the sport.\n\n"
+        "The City Council of Loja offers a very important work in the sport of the municipality, so that this sporting event will be present as organizer.\n\n"
+        "INTERNAL IMPLICATION TO THE PEOPLE OF LOJA\n\n"
+        "One of the main ideas that the organizing directors of this sporting event have in mind is that it is beneficial for the municipality, both in economic, social and cultural spheres. In this way we try to involve the whole town and live as a sporting event that shows the illusion of Loja for important events that attract tourists, and can become a benchmark in coming years.\n\n"
+        "A very important function of the shops of the town is their participation as collaborators of the race, and on the other hand the collaboration of various sports associations or not, to help in the tasks that are created convenient from the organization.\n\n"
+        "Likewise, people of the town that give us their help to perform different tasks such as (dj, speaker, delivery dorsals, refreshments, signage of routes, etc.).\n\n"
+        "On the other hand many fans of the town to sport, especially running, see the race as an encouragement to train and enjoy the sport touring the Sierra de la Loja.\n\n"
+        "EXTERNAL IMPACT\n\n"
+        "Not only the race will have internal repercussion in the town but also extends to nearby towns. Businesses and external companies will participate collaborating and showing interest in the sport.\n\n"
+        "Likewise, many riders will be interested in participating and being able to enjoy the mountains that they have always had so close but they have never decided to travel due to ignorance of it.\n\n"
+        "VARIOUS LEGISLATIVE ASPECTS\n\n"
+        "To carry out the celebration of a sporting event it is necessary to control the whole scope of legality in this regard. Do not forget the permits and legal and formal requirements that are required by current legislation for the celebration of public events or recreational activities, and in this case a sporting event such as the IV Mountain Race of Loja.\n\n"
+        "In the case that we undertake, we understand by legislation a set of laws or regulations that regulate the event that is intended to be organized. It is essential to know and apply the legal part of the event in question to avoid problems that can become a real puzzle and even be able to affect the possibility of holding the event or its suspension.\n\n"
+        "Therefore, a series of requirements are necessary to celebrate an event.\n\n"
+        "The first of these is the necessary documentation, which includes the permits, licenses and contracts on which almost all commercial relationships and the realization of the event will depend.\n\n"
+        "In addition, insurance is also very important, to try to cover all possible contingencies and incidents that may occur, and to guarantee by all means the safety of people and, also, the assets. The test will be covered by an Accident and Civil Liability Insurance that will cover all registered participants.\n\n"
+        "As for the Security issue, it will be carried out by the Local Police of Loja, which will have the necessary security elements for this work. On the other hand, the medical services and ambulance of the Red Cross will be available.\n\n"
+        "Regarding the sanitary control part, a sufficient number of sanitary and equipped toilets will be provided. Efforts will be made to have sources of drinking water. Greater rigor in terms of quality and the conditions of presentation and conditioning of the food offered for consumption at the refreshment stations.\n\n"
+        "PROPOSAL FOR NEW EDITIONS\n\n"
+        "Once a sporting event is over, it is necessary to carry out an analysis and draw conclusions on how everything has turned out. This task corresponds to the organizing directors who, after studying the event, decide if it has been positive, and present new ideas and proposals so that the next editions will be of greater organizational and sporting quality.\n\n"
+        "This process of improvement will be very present within the organization of the Mountain Race of Loja.\n\n"
+    </string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_pruebas">Races</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_menu_lateral">Abades Stone Race</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+</resources>
