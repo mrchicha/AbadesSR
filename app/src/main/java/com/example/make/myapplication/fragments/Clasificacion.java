@@ -166,9 +166,9 @@ public class Clasificacion extends Fragment {
 
         for(Corredor c : corredores){
             Category category = new Category(
-                    "Clasificado nº: " + c.getClasificacion(),
-                    "Dorsal: " + c.getDorsal(),
-                    "Nombre: " + c.getNombre() + " " + c.getApellidos());
+                    getString(R.string.clasificado)+ " " + c.getClasificacion(),
+                    getString(R.string.dorsal) + " " + c.getDorsal(),
+                    getString(R.string.nombre) + " " + c.getNombre() + " " + c.getApellidos());
             Arraycategory.add(category);
         }
 

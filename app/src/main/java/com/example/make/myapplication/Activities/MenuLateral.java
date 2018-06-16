@@ -33,24 +33,24 @@ public class MenuLateral extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_lateral);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer =  findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -73,7 +73,7 @@ public class MenuLateral extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        // Añadimos la opción de ir al menú de opciones del GPS
         if (id == R.id.action_settings) {
             startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
             //return true;
@@ -89,38 +89,28 @@ public class MenuLateral extends AppCompatActivity
 
         switch (id){
             case R.id.nav_abades:
-                //fragmentmanager.beginTransaction().replace(R.id.contenedor,new AbadesStoneRace()).commit();
-                //getSupportActionBar().setTitle("titulo aca");
-                cambioFragment(new AbadesStoneRace(),"Abades Stone Race");
+                cambioFragment(new AbadesStoneRace(),getString(R.string.Abades));
                 break;
             case R.id.nav_media:
-                //fragmentmanager.beginTransaction().replace(R.id.contenedor,new MediaStone()).commit();
-                cambioFragment(new MediaStone(),"Media Stone Race");
+                cambioFragment(new MediaStone(),getString(R.string.Media));
                 break;
             case R.id.nav_mini:
-                cambioFragment(new MiniStoneRace(),"Mini Stone Race");
-                //fragmentmanager.beginTransaction().replace(R.id.contenedor,new MiniStoneRace()).commit();
+                cambioFragment(new MiniStoneRace(),getString(R.string.Mini));
                 break;
             case R.id.nav_vertical:
-                cambioFragment(new MedioVertical(),"1/2 KM Vertical");
-                //fragmentmanager.beginTransaction().replace(R.id.contenedor,new MedioVertical()).commit();
+                cambioFragment(new MedioVertical(),getString(R.string.Vertical));
                 break;
             case R.id.nav_actividades:
                 cargarInscripcion(null);
-                //fragmentmanager.beginTransaction().replace(R.id.contenedor,new AbadesStoneRace()).commit();
-                //cargarFotos();
                 break;
             case R.id.nav_resultados:
-                cambioFragment(new Clasificacion(),"Resultados");
-                //fragmentmanager.beginTransaction().replace(R.id.contenedor,new MediaStone()).commit();
+                cambioFragment(new Clasificacion(),getString(R.string.Resultados));
                 break;
             case R.id.nav_patrocinadores:
-                cambioFragment(new Patrocinadores(),"Patrocinadores y organizadores");
-                //fragmentmanager.beginTransaction().replace(R.id.contenedor,new Patrocinadores()).commit();
+                cambioFragment(new Patrocinadores(),getString(R.string.Patrocinadores_organizadores));
                 break;
             case R.id.nav_informacion:
-                cambioFragment(new Info(),"Información");
-                //fragmentmanager.beginTransaction().replace(R.id.contenedor,new Info()).commit();
+                cambioFragment(new Info(),getString(R.string.informacion));
                 break;
             case R.id.nav_loc:
                 cargarActLocalizacion();
@@ -133,7 +123,7 @@ public class MenuLateral extends AppCompatActivity
                 break;
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -236,14 +226,12 @@ public class MenuLateral extends AppCompatActivity
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(
                 this);
 
-        // Setting Dialog Title
-        alertDialog.setTitle("¿Salir de la aplicación?");
+        // Título y mensaje del dialog
+        alertDialog.setTitle(getString(R.string.mensajesalir));
+        alertDialog.setMessage(getString(R.string.confirmarsalir));
 
-        // Setting Dialog Message
-        alertDialog.setMessage("¿Está seguro de que desea salir de la aplicación?");
-
-        // Setting Positive "Yes" Button
-        alertDialog.setPositiveButton("YES",
+        // Opción si
+        alertDialog.setPositiveButton(getString(R.string.si),
 
                 new DialogInterface.OnClickListener() {
 
@@ -253,13 +241,13 @@ public class MenuLateral extends AppCompatActivity
                     }
                 });
 
-        // Setting Negative "NO" Button
-        alertDialog.setNegativeButton("NO",
+        // Opción no
+        alertDialog.setNegativeButton(getString(R.string.no),
 
                 new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-                        // Write your code here to invoke NO event
+                        // Cancelamos el diálogo en caso de pulsar en no
                         dialog.cancel();
                     }
                 });

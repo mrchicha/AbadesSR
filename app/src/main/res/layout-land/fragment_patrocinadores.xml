@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Patrocinadores">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="TODO"
+                android:onClick="cargarAbadesPatrocinador"
+                android:src="@drawable/logoabadespatrocinador" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="169dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:onClick="cargarAyuntamientoPatrocinador"
+                    android:src="@drawable/logoayuntamientoloja" />
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="169dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:onClick="cargarMalaCaraPatrocinador"
+                    android:src="@drawable/logomalacaraclub" />
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="176dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:onClick="cargarApoloPatrocinador"
+                    android:src="@drawable/logoapolopatrocinador" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="match_parent"
+                android:layout_height="121dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="cargarCocacolaPatrocinador"
+                android:src="@drawable/logococacola" />
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:onClick="cargarPoweradePatrocinador"
+                android:src="@drawable/logopoweradepatrocinador" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

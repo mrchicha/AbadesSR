@@ -67,16 +67,16 @@ public class BuscarLoc extends AppCompatActivity {
         // En función de donde venga la petición ejecuta un método con los parámetros correspondientes
         switch (i){
             case 0:
-                cargaMap(37.15637,-4.2067,"http://www.2654420-1.web-hosting.es/abades433.kml", "Inicio Abades stone");
+                cargaMap(37.15637,-4.2067,"http://www.2654420-1.web-hosting.es/abades433.kml", getString(R.string.inicio) + " " + getString(R.string.Abades));
                 break;
             case 1:
-                cargaMap( 37.160249, -4.189244,"http://www.2654420-1.web-hosting.es/mediastone.kml", "Inicio Media stone");
+                cargaMap( 37.160249, -4.189244,"http://www.2654420-1.web-hosting.es/mediastone.kml", getString(R.string.inicio) + " " + getString(R.string.Media));
                 break;
             case 2:
-                cargaMap(37.171537,-4.154954,"http://www.2654420-1.web-hosting.es/abadesministonerace.kml", "Inicio Mini stone");
+                cargaMap(37.171537,-4.154954,"http://www.2654420-1.web-hosting.es/abadesministonerace.kml", getString(R.string.inicio) + " " + getString(R.string.Mini));
                 break;
             case 3:
-                cargaMap( 37.157919,-4.141789,"http://www.2654420-1.web-hosting.es/mediovertical.kml","Inicio KM vertical");
+                cargaMap( 37.157919,-4.141789,"http://www.2654420-1.web-hosting.es/mediovertical.kml",getString(R.string.inicio) + " " + getString(R.string.Vertical));
                 break;
             default:
 
@@ -85,7 +85,7 @@ public class BuscarLoc extends AppCompatActivity {
         }
     }
 
-    public void peticionVolley(String dorsal){
+    public void peticionVolley(final String dorsal){
         // Crear nueva cola de peticiones
         requestQueue= Volley.newRequestQueue(this);
 
@@ -104,7 +104,7 @@ public class BuscarLoc extends AppCompatActivity {
                             Double lon = Double.parseDouble(corredor.getLongitud());
                             Double lat = Double.parseDouble(corredor.getLatitud());
 
-                            cargaMap(lat,lon,"", "Posición actual dorsal: 1001");
+                            cargaMap(lat,lon,"", getString(R.string.posicion_actual)+ " " + dorsal);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -161,19 +161,19 @@ public class BuscarLoc extends AppCompatActivity {
 
     }
 
-    // Método que pide un dorsal y lo pasa como parámetro al método que lo busca en la base de datos
+    // Método que pide un dorsal en un dialog y lo pasa como parámetro al método que lo busca en la base de datos
     public void pedirDorsal(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Indique el dorsal que quiere localizar");
+        builder.setTitle(getString(R.string.dorsal_localizar));
 
-        // Set up the input
+        // EdirText que recoje el texto
         final EditText input = new EditText(this);
-        // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+        // Tipo de entrada de datos
         input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_CLASS_TEXT);
         builder.setView(input);
 
-        // Set up the buttons
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        // Configuramos los botones aceptar / cancelar
+        builder.setPositiveButton(getString(R.string.aceptar), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dorsalLoc = input.getText().toString();
@@ -181,7 +181,7 @@ public class BuscarLoc extends AppCompatActivity {
                 peticionVolley(dorsalLoc);
             }
         });
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(getString(R.string.cancelar), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
@@ -199,7 +199,7 @@ public class BuscarLoc extends AppCompatActivity {
 
     public void onPause(){
         super.onPause();
-        map.onPause();  //needed for compass, my location overlays, v6.0.0 and up
+        map.onPause();
     }
 }
 

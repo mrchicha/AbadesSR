@@ -113,14 +113,14 @@ public class ActivarLoc extends AppCompatActivity {
             // Llama al método de actualizar la ubicación con el objeto location
             actualizarUbicacion(location);
 
-            // Pide la actualización de la ubicación al objeto location manager cada 20 segundos, con 2 metros de distancia mínima
+            // Pide la actualización de la ubicación al objeto location manager cada 10 segundos, con 20 metros de distancia mínima
             // y usando el listener del location manager
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,10000,20,locationListener);
         }
         else {
             AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-            dialog.setMessage("El GPS no está activo");
-            dialog.setPositiveButton("Activar el GPS desde el menú", new DialogInterface.OnClickListener() {
+            dialog.setMessage(getString(R.string.gps_inactvo));
+            dialog.setPositiveButton(getString(R.string.activar_gps), new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface paramDialogInterface, int paramInt) {
                     // TODO Auto-generated method stub
@@ -129,7 +129,7 @@ public class ActivarLoc extends AppCompatActivity {
                     //get gps
                 }
             });
-            dialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            dialog.setNegativeButton(getString(R.string.cancelar), new DialogInterface.OnClickListener() {
 
                 @Override
                 public void onClick(DialogInterface paramDialogInterface, int paramInt) {
