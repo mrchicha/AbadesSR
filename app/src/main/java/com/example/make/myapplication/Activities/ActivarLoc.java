@@ -10,6 +10,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -57,14 +58,9 @@ public class ActivarLoc extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //handle permissions first, before map is created. not depicted here
 
-        //load/initialize the osmdroid configuration, this can be done
+
         Context ctx = getApplicationContext();
         Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
-        //setting this before the layout is inflated is a good idea
-        //it 'should' ensure that the map has a writable location for the map cache, even without permissions
-        //if no tiles are displayed, you can try overriding the cache path using Configuration.getInstance().setCachePath
-        //see also StorageUtils
-        //note, the load method also sets the HTTP User Agent to your application's package name, abusing osm's tile servers will get you banned based on this string
 
         //inflate and create the map
         setContentView(R.layout.activity_loc_dorsal);
@@ -77,13 +73,8 @@ public class ActivarLoc extends AppCompatActivity {
         map.setMultiTouchControls(true);
         mapController.setZoom(14);
 
-        //GeoPoint startPoint = new GeoPoint(37.143051, -4.073414);
-        //mapController.setCenter(startPoint);
         pedirDorsal();
 
-        //startMarker = new Marker(map);
-
-        //startMarker.setPosition(startPoint);
     }
 
     // Método que añade ubicación al mapa y sube los datos a la base de datos
@@ -165,7 +156,7 @@ public class ActivarLoc extends AppCompatActivity {
         mapController.setCenter(startPoint);
         startMarker = new Marker(map);
         startMarker.setPosition(startPoint);
-        startMarker.setIcon(getResources().getDrawable(R.drawable.marcadorp));
+        startMarker.setIcon(getResources().getDrawable(R.drawable.marcadordeposicion));
         startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
         map.getOverlay().clear();
         map.getOverlays().add(startMarker);
@@ -276,7 +267,7 @@ public class ActivarLoc extends AppCompatActivity {
         // EdirText que recoje el texto
         final EditText input = new EditText(this);
         // Tipo de entrada de datos
-        input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_CLASS_TEXT);
+        input.setInputType(InputType.TYPE_CLASS_NUMBER);
         builder.setView(input);
 
         // Configuramos los botones aceptar / cancelar

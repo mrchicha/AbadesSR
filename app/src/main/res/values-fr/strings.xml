@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Abades Stone Race</string>
+    <string name="title_activity_menu__drawer">Abades Stone Race</string>
+
+    <string name="navigation_drawer_open">Ouvrir navigation drawer</string>
+    <string name="navigation_drawer_close">Fermer navigation drawer</string>
+
+    <string name="action_settings">Paramètres</string>
+
+    <string name="cargando">Chargement...</string>
+    <string name="edicion">Bienvenue à la 5ème édition!</string>
+    <string name="incripciones">Inscriptions ouvertes</string>
+    <string name="incribir">Inscrivez-vous à la course</string>
+
+    <string name="Pruebas">Les courses</string>
+    <string name="Inscripciones">Inscription</string>
+    <string name="Resultados">Résultats</string>
+    <string name="Patrocinadores">Commanditaires</string>
+    <string name="Patrocinadores_organizadores">Commanditaires et organisateurs</string>
+    <string name="informacion">Information</string>
+
+    <string name="Menu_Localizacion">Localisation</string>
+    <string name="Localizar_dorsal">Localiser le dorsale</string>
+    <string name="Activar_localizacion">Permettre la localisation</string>
+    <string name="posicion_actual">Position dorsale actuelle:</string>
+
+    <string name="dorsal_localizar">Indiquez le dorsale que vous voulez localiser</string>
+    <string name="dorsal_ubicacion">Indiquez votre numéro de dossard</string>
+
+    <string name="Menu_Salir">D´autres options</string>
+    <string name="Salir">Quitter la´pplication</string>
+
+    <string name="inicio">Accueil</string>
+    <string name="Abades">Abades Stone race 43km</string>
+    <string name="Media">Media Stone race 21km</string>
+    <string name="Mini">Mini Stone race 13km</string>
+    <string name="Vertical">1/2 KM vertical 1,8km</string>
+
+    <string name="opcion1">option1</string>
+    <string name="opcion2">option2</string>
+    <string name="opcion3">option3</string>
+
+    <string name="menugps">Options du GPS</string>
+    <string name="menu">Menu</string>
+
+    <string name="gps_inactvo">Le GPS n`est pas actif</string>
+    <string name="activar_gps">Activer le GPS depuis le menu</string>
+
+    <string name="title_activity_scrolling_prueba">ScrollingActivityPrueba</string>
+
+    <string name="si">OUI</string>
+    <string name="no">NON</string>
+    <string name="aceptar">Accepter</string>
+    <string name="cancelar">Annuler</string>
+    <string name="mensajesalir">Quitter l´application?</string>
+    <string name="confirmarsalir">Êtes-vous sûr de vouloir quitter l´application?</string>
+    <string name="nodorsal">Le dorsale sélectionné ne partage pas son emplacement</string>
+    <string name="nohaydorsal">La dorsale sélectionnée n`existe pas</string>
+
+    <string name="clasificado">Classé nº:</string>
+    <string name="dorsal">Dorsale:</string>
+    <string name="nombre">Prénom:</string>
+
+    <string name="avituallamientos">Alimentaire</string>
+    <string name="perfil">PROFIL DE VOYAGE:</string>
+    <string name="descripcion43">
+        "DESCRIPTION STONE RACE:\n\n"
+        "Distance: 43 km.\n"
+        "Difficulté technique: Moyenne - Élevée\n"
+        "Environs: Sierra de Loja et Monte Hacho\n"
+        "Départ: zone de service Abades Loja\n"
+        "Arrivée: Stade Medina Lauxa\n"
+        "Altitude cumulée positive: 2570 m\n"
+        "Altitude supérieure: 1614 m Sierra de Loja\n"
+        "Frais d'inscription:\n"
+        "Fédéré et Non Fédéré: 25 €\n"
+    </string>
+    <string name="descripcion23">
+        "DESCRIPTION MEDIA STONE:\n\n"
+		"Distance: 23 km.\n"
+        "Difficulté technique: Moyenne - Élevée\n"
+        "Environs: Sierra de Loja\n"
+        "Départ: zone de service Abades Loja\n"
+        "Arrivée: Stade Medina Lauxa\n"
+        "Altitude cumulée positive: 1265 m\n"
+        "Altitude supérieure: 1500 m Sierra de Loja\n"
+        "Frais d'inscription:\n"
+        "Fédéré et Non Fédéré: 18 €\n"
+    </string>
+    <string name="descripcion13">
+        "DESCRIPTION MINI STONE:\n\n"
+		"Distance: 13 km.\n"
+        "Difficulté technique: Faible - Moyenne\n"
+        "Environs: Sierra de Loja\n"
+        "Départ: zone de service Abades Loja\n"
+        "Arrivée: Stade Medina Lauxa\n"
+        "Altitude cumulée positive:\n"
+        "Altitude supérieure: 1049 m Sierra de Loja\n"
+        "Frais d'inscription:\n"
+        "Fédéré et Non Fédéré: 18 €\n"
+    </string>
+    <string name="descripcionmedio">
+        "DESCRIPTION 1/2 KM VERTICAL:\n\n"
+		"Distance: 1.8 km.\n"
+        "Difficulté technique: Moyenne\n"
+        "Environs: Sierra de Loja\n"
+        "Départ: zone de service Abades Loja\n"
+        "Arrivée: Le plus haut point\n"
+        "Altitude cumulée positive: 485 m\n"
+        "Altitude supérieure: 1044 m Sierra de Loja\n"
+        "Frais d'inscription:\n"
+        "Fédéré et Non Fédéré: 18 €\n"
+        "• Gratuit avec l'enregistrement dans n'importe quelle modalité.\n"
+        "• Seulement pour la pierre ½ Km Vertical: 5 €\n"
+    </string>
+    <string name="presentacion">
+        "PRÉSENTATION DE LA CARRIÈRE\n\n"
+        "Profiter de l'environnement rural et du paysage dans le"
+        "qui sont situés les zones rurales de la municipalité"
+        "de Loja et étant donné le boom que les courses ont"
+        "Montagne, nous voulons donner vie à ce projet et à ceux qui"
+        "surgir dans cette discipline.\n\n"
+        "Notre objectif est de promouvoir ce sport de deux façons: Une compétitive avec quatre parcours: 41 km Marathon de pierre, 23 km de pierre moyenne, une mini-pierre de 13 km et la verticale 1/2 Kilomètre, l'autre altruiste-ludique, ce parallèle au minitrail sera une marche en montagne (la marche ne sera pas compétitive) profitant d'une partie de l'itinéraire du même, tant qu'ils ne gênent pas le passage des couloirs et entre les deux ne se fâchent pas ou ne créent pas un danger imminent parmi les participants. Il aura également un format touristique, puisque l'essai passera par différents points géographiques de la ville où il est développé; prolonger l'essai d'environ 10 à 50 km et informer tous les participants de notre environnement et de ses autres valeurs.\n\n"
+        "La date de la course sera le 4 et 5 novembre. Ce sera samedi après-midi à 16h00 dans lequel le kilomètre vertical sera joué et dimanche matin, de 8h30 à 17h30, ce qui est estimé à l'arrivée du dernier participant de la course la plus longue, en fonction de la météo et des différentes distances seront établis les horaires et les contrôles organisationnels, à la fois la carrière et la logistique, pour le bon développement de celui-ci.\n\n"
+        "Pour atteindre ces objectifs, une organisation et une gestion correctes de l'événement sont nécessaires, ce qui implique de maîtriser tous les aspects qui le caractérisent: marketing, logistique, partie économique et juridique, infrastructures internes et externes nécessaires, le personnel technique nécessaire, etc.\n\n"
+        "L'expérience des éditions précédentes et l'implication de notre club avec la Mairie de Loja nous permettent d'organiser cette course avec le maximum de garanties de succès et avec la certitude presque absolue que nous serons en mesure de prévoir toutes les circonstances qui l'entourent afin que son développement est aussi parfait que possible.\n\n"
+        "Après cette petite contextualisation nous avons continué à détailler les aspects organisationnels:\n\n"
+        "LOJA ET LA SIERRA DE LOJA\n\n"
+        "Loja est située dans la partie occidentale de la province de Grenade (Communauté autonome d'Andalousie), faisant partie de la région de Poniente Granadino et limitrophe des provinces de Malaga et de Cordoue, à pied de l'autoroute A-92, Km. 192, (CN-342), le principal axe de communication de l'Andalousie, pour lequel la plupart des voyages sont actuellement effectués au sein de notre Communauté Autonome, ce qui signifie que des capitales de provinces plus éloignées pas plus de trois heures pour arriver à la ville.\n\n"
+        "La municipalité de Loja avec ses plus de 450 km2, abrite un territoire diversifié dans le paysage: montagnes, collines, montagnes, berges, bosquets, rivières et champs, constituent une mosaïque naturelle et culturelle qui composent la structure de notre ville. abrite une riche diversité vivante, composée de nombreuses espèces de plantes et d'animaux trouvés ici à Loja, un endroit idéal pour vivre et participer à la vie quotidienne à la place. ne pas oublier les structures formidables et des formations géologiques dont la création a donné à cette section du Poniente Granadino: chaînes de montagnes karstiques, méandres, ravins, ruisseaux, vegas etc ...\n\n"
+        « La Sierra de Loja, à partir duquel une vue panoramique vue de la région sont en vue, il est l´habitat pour les oiseaux de proie, les chèvres et les chats sauvages ou gallipato, les espèces endémiques dernière peut être observée dans la Charco del Noire. Il possède de nombreuses cavités, fractures et grottes verticales dans la roche (comme le célèbre Cueva Horadada), adapté à la pratique de Spéléologie, sport d'aventure à d'autres comme la randonnée ou le vol libre avec deux décollages ajouter. vous pouvez également visiter le parc éolien.\n\n"
+        "Aussi, les gens ordinaires qui nous donnent leur aide pour effectuer différentes tâches comme (dj, haut-parleur, la livraison de retour, l'approvisionnement, les chemins de signalisation, etc.).\n\n"
+       "D'autre part beaucoup de gens aux amateurs de sport, en particulier la course, voir la course comme un stimulant pour former et profiter de ce sport visiter la Sierra de Loja.\n\n"
+       "REPERCUSION EXTERNE\n\n"
+	   "Non seulement la course aura des répercussions internes dans le village, mais il étend aussi les villes voisines. Les magasins et les entreprises externes impliqués collaboration et votre intérêt pour le sport.\n\n"
+       "En outre, de nombreux courtiers seront intéressés à participer et à profiter de la montagne qui ont toujours été si proche mais jamais ont décidé de passer par l'ignorance de celui-ci.\n\n"
+       "DIVERS ASPECTS LÉGISLATIFS\n\n"
+       "Pour mener à bien la tenue d'une manifestation sportive est nécessaire de contrôler la portée de la légalité toute à ce sujet. Sans oublier les autorisations légales et formelles et les exigences qui sont par la réglementation en vigueur requise pour le maintien des spectacles publics ou des activités récréatives, et dans ce cas d'un événement sportif comme l'IV Mountain Race de Loja.\n\n"
+       "Dans le cas Rushing nous entendons par la loi un ensemble de lois ou des règles régissant l'événement qui vise à organiser. Il est essentiel de connaître et d'appliquer la partie juridique de l'événement en question pour éviter les problèmes qui peuvent devenir un véritable casse-tête et même le pouvoir arriver à affecter la possibilité de tenir l'événement ou sa suspension.\n\n"
+       "Par conséquent, une série d'exigences sont nécessaires pour célébrer un événement.\n\n"
+       "Le premier est les contrats nécessaires qui dépendent presque toutes les relations commerciales et la réalisation effective des documents d'événements, qui incluent les permis, les licences et les.\n\n"
+       "En outre, ils sont également très importantes assurance, pour essayer de couvrir toutes les éventualités et les pertes éventuelles qui peuvent se produire, et assurer par tous les moyens la sécurité des personnes et des biens aussi. Le test sera couvert par l'assurance responsabilité civile et des accidents qui couvriront tous les participants inscrits.\n\n"
+        "La question de la sécurité sera effectuée par la police locale à Loja qui aura la sécurité nécessaire pour ce travail. Sur les autres services médicaux disponibles main et ambulance de la Croix-Rouge./n"
+        "En ce qui concerne la partie des contrôles de santé seront mis à l'allocation d'une quantité suffisante de santé et équipée. Des efforts seront mis à la disposition des sources d'eau potable. Qualité plus rigoureux et les conditions de présentation et l'emballage des aliments offerts pour Consommation en rafraîchissements.\n\n"
+        "PROPOSITION DE NOUVELLES ÉDITIONS\n\n"
+        "Une fois qu'un événement sportif terminé est nécessaire d'analyser et de tirer des conclusions sur la façon dont tout se. Ceci est une tâche pour les responsables des organisateurs qui, après avoir étudié l'événement décident si elle était positive la mise en œuvre de celle-ci et présente des idées nouvelles et des propositions de les prochaines éditions seront de meilleure qualité organisationnelle et sportive.\n\n"
+        "Ce processus d'amélioration sera très présent dans l'organisation de la Course de Montagne de Loja.\n\n"
+    </string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_pruebas">Pruebas</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_menu_lateral">Abades Stone Race</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+</resources>

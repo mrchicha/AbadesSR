@@ -160,7 +160,7 @@ public class BuscarLoc extends AppCompatActivity {
         Marker startMarker = new Marker(map);
         startMarker.setPosition(startPoint);
         startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
-        startMarker.setIcon(getResources().getDrawable(R.drawable.marcadorp));
+        startMarker.setIcon(getResources().getDrawable(R.drawable.marcadordeposicion));
         startMarker.setTitle(datoPunto);
         map.getOverlays().add(startMarker);
 
@@ -186,7 +186,7 @@ public class BuscarLoc extends AppCompatActivity {
         // EdirText que recoje el texto
         final EditText input = new EditText(this);
         // Tipo de entrada de datos
-        input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_CLASS_TEXT);
+        input.setInputType(InputType.TYPE_CLASS_NUMBER);
         builder.setView(input);
 
         // Configuramos los botones aceptar / cancelar
