@@ -49,7 +49,7 @@ public class Corredor {
         this.clasificacion = clasificacion;
     }
 
-    // Getter Methods
+    // Getter
 
     public String getDorsal() {
         return dorsal;
@@ -115,7 +115,7 @@ public class Corredor {
         return kmvertical;
     }
 
-    // Setter Methods
+    // Setter
 
     public void setDorsal(String dorsal) {
         this.dorsal = dorsal;

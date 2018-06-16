@@ -19,59 +19,24 @@ import java.util.ArrayList;
 
 public class CorredorImpl {
 
-    private static RequestQueue requestQueue;
-    static Corredor corredor;
-
-
-    public static ArrayList<Corredor> corredoresLista(){
+    // Método que obtiene un arraylist de corredores de un jsonArray
+    public static ArrayList<Corredor> listaCorredores(JSONArray jsonArray) throws JSONException {
         ArrayList<Corredor> corredores = new ArrayList<>();
 
+        // Recorremos el jsonArray
+        for(int i=0; i<jsonArray.length();i++){
 
-
-
+            // Pasa cada objeto json a corredor y lo añade al arrayList de corredores
+            corredores.add(corredorDorsal(jsonArray.getJSONObject(i)));
+        }
         return corredores;
     }
 
-    public static Corredor obtenerCorredor(String dorsal, Activity activity){
-
-
-        // Crear nueva cola de peticiones
-        requestQueue= Volley.newRequestQueue(activity);
-
-        // Nueva petición JSONObject
-        JsonObjectRequest jsArrayRequest = new JsonObjectRequest(
-                Request.Method.GET,
-                "http://2654420-1.web-hosting.es/select_id_01.php?dorsal=" + dorsal,
-                null,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-
-                        try {
-                            corredor = corredorDorsal(response);
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.d("Log", "Error Respuesta en JSON: " + error.getMessage());
-
-                    }
-                }
-        );
-        requestQueue.add(jsArrayRequest);
-
-
-        return corredor;
-    }
-
+    // Método que recibe un objeto json y devuelve un corredor
     public static Corredor corredorDorsal(JSONObject jsonObject) throws JSONException {
         Corredor corredor = new Corredor();
 
+        // Obtenemos los elementos del json con su name correspondiente
         corredor.setDorsal(jsonObject.getString("dorsal"));
         corredor.setModalidad(jsonObject.getString("modalidad"));
         corredor.setNombre(jsonObject.getString("nombre"));
@@ -96,7 +61,5 @@ public class CorredorImpl {
 
         return corredor;
     }
-    public static void actualizarPosicionamineto(String dorsal, String latitud, String longitud){
 
-    }
 }

@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -32,11 +33,9 @@ import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.FolderOverlay;
 import org.osmdroid.views.overlay.Marker;
 
-import static com.example.make.myapplication.ImpCorredor.CorredorImpl.corredorDorsal;
-
 
 public class BuscarLoc extends AppCompatActivity {
-    MapView map = null;
+    private MapView map = null;
     private RequestQueue requestQueue;
     private String dorsalLoc = "";
 
@@ -58,7 +57,8 @@ public class BuscarLoc extends AppCompatActivity {
         //inflate and create the map
         setContentView(R.layout.activity_act_localizacion);
 
-        map = (MapView) findViewById(R.id.map);
+        // Seleccionamos el mapa y el tipo de capa a mostrar
+        map = findViewById(R.id.map);
         map.setTileSource(TileSourceFactory.OpenTopo);
 
         // Dato que recibimos para determinar desde donde se llama al Activity
@@ -67,29 +67,35 @@ public class BuscarLoc extends AppCompatActivity {
         // En función de donde venga la petición ejecuta un método con los parámetros correspondientes
         switch (i){
             case 0:
+                // Abades stone
                 cargaMap(37.15637,-4.2067,"http://www.2654420-1.web-hosting.es/abades433.kml", getString(R.string.inicio) + " " + getString(R.string.Abades));
                 break;
             case 1:
+                // Media stone
                 cargaMap( 37.160249, -4.189244,"http://www.2654420-1.web-hosting.es/mediastone.kml", getString(R.string.inicio) + " " + getString(R.string.Media));
                 break;
             case 2:
+                // Mini stone
                 cargaMap(37.171537,-4.154954,"http://www.2654420-1.web-hosting.es/abadesministonerace.kml", getString(R.string.inicio) + " " + getString(R.string.Mini));
                 break;
             case 3:
+                // Km vertical
                 cargaMap( 37.157919,-4.141789,"http://www.2654420-1.web-hosting.es/mediovertical.kml",getString(R.string.inicio) + " " + getString(R.string.Vertical));
                 break;
             default:
-
+                // Entrada a buscar dorsal
                 pedirDorsal();
                 break;
         }
     }
 
+    // Método que realiza petición de corredor a la base de datos con un parámetro dorsal
     public void peticionVolley(final String dorsal){
+
         // Crear nueva cola de peticiones
         requestQueue= Volley.newRequestQueue(this);
 
-        // Nueva petición JSONObject
+        // Nueva petición de un corredor por su dorsal
         JsonObjectRequest jsArrayRequest = new JsonObjectRequest(
                 Request.Method.GET,
                 "http://2654420-1.web-hosting.es/select_id_01.php?dorsal=" + dorsal,
@@ -99,12 +105,25 @@ public class BuscarLoc extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
 
                         try {
+                            // Sacamos el corredor del responde de la petición
+                            Corredor corredor = CorredorImpl.corredorDorsal(response);
 
-                            Corredor corredor = corredorDorsal(response);
-                            Double lon = Double.parseDouble(corredor.getLongitud());
-                            Double lat = Double.parseDouble(corredor.getLatitud());
+                            // Comprobamos si el dorsal está compartiendo su ubicación
+                            // si es así cargamos el mapa con su latitud y longitud
+                            if(corredor.getEnmovimiento().equalsIgnoreCase("si")){
+                                Double lon = Double.parseDouble(corredor.getLongitud());
+                                Double lat = Double.parseDouble(corredor.getLatitud());
 
-                            cargaMap(lat,lon,"", getString(R.string.posicion_actual)+ " " + dorsal);
+                                cargaMap(lat,lon,"", getString(R.string.posicion_actual)+ " " + dorsal);
+                            }
+
+                            // Si el dorsal no está compartiendo ubicación avisamoa al usuario y
+                            // volvemos a pedir nuevamente el dorsal
+                            else {
+                                Toast.makeText(getApplicationContext(),getString(R.string.nodorsal),Toast.LENGTH_LONG).show();
+                                pedirDorsal();
+                            }
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -115,22 +134,28 @@ public class BuscarLoc extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
                         Log.d("Log", "Error Respuesta en JSON: " + error.getMessage());
 
+                        // Si la consulta devuelve un error al pedir un dorsal no existente
+                        Toast.makeText(getApplicationContext(),getString(R.string.nohaydorsal),Toast.LENGTH_LONG).show();
+                        pedirDorsal();
                     }
                 }
         );
         requestQueue.add(jsArrayRequest);
     }
 
+    // Método que carga un mapa con los datos: latitud, longitud, ruta kml, nombre del punto
     public void cargaMap(Double latitud, Double longitud, String rutaKML, String datoPunto){
 
-
+        // Definimos el controlador para el mapa y le añadimos las funcionalidad
         IMapController mapController = map.getController();
         map.setBuiltInZoomControls(true);
         map.setMultiTouchControls(true);
         mapController.setZoom(14);
+
+        // Creamos un punto con la latitud y longitud passadas por parámetro y ceentramos
+        // el mapa en el punto creado
         GeoPoint startPoint = new GeoPoint(latitud, longitud);
         mapController.setCenter(startPoint);
-
 
         Marker startMarker = new Marker(map);
         startMarker.setPosition(startPoint);
@@ -139,6 +164,7 @@ public class BuscarLoc extends AppCompatActivity {
         startMarker.setTitle(datoPunto);
         map.getOverlays().add(startMarker);
 
+        // Cargamos el documento kml, si lo hay y lo añadimos al mapa
         KmlDocument kmlDocument = new KmlDocument();
         if(!rutaKML.equals(""))
         {
@@ -148,17 +174,8 @@ public class BuscarLoc extends AppCompatActivity {
         FolderOverlay kmlOverlay = (FolderOverlay)kmlDocument.mKmlRoot.buildOverlay(map, null, null, kmlDocument);
         map.getOverlays().add(kmlOverlay);
 
+        // Repintamos el mapa
         map.invalidate();
-    }
-
-    public Corredor obtenerCorredor(String dorsal){
-        Corredor corredor = CorredorImpl.obtenerCorredor(dorsal,this);
-
-        return corredor;
-    }
-
-    public void cargarUbucacionDorsal(Corredor corredor){
-
     }
 
     // Método que pide un dorsal en un dialog y lo pasa como parámetro al método que lo busca en la base de datos

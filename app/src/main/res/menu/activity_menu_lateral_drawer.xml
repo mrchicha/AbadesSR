@@ -61,7 +61,7 @@
         <menu>
             <item
                 android:id="@+id/salir"
-                android:icon="@drawable/cancelar"
+                android:icon="@drawable/saliropcion"
                 android:title="@string/Salir" />
 
         </menu>

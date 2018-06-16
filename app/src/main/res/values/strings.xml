@@ -25,6 +25,7 @@
     <string name="posicion_actual">Posición actual dorsal:</string>
 
     <string name="dorsal_localizar">Indique el dorsal que quiere localizar</string>
+    <string name="dorsal_ubicacion">Indique su dorsal</string>
 
     <string name="Menu_Salir">Otras opciones</string>
     <string name="Salir">Salir de la aplicación</string>
@@ -53,6 +54,8 @@
     <string name="cancelar">Cancelar</string>
     <string name="mensajesalir">¿Salir de la aplicación?</string>
     <string name="confirmarsalir">¿Está seguro de que desea salir de la aplicación?</string>
+    <string name="nodorsal">El dorsal seleccionado no está compartiendo su ubicación</string>
+    <string name="nohaydorsal">El dorsal seleccionado no existe</string>
 
     <string name="clasificado">Clasificado nº:</string>
     <string name="dorsal">Dorsal:</string>

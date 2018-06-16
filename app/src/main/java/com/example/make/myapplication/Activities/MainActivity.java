@@ -1,7 +1,5 @@
 package com.example.make.myapplication.Activities;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         textView=findViewById(R.id.textView13);
         textView.setVisibility(View.INVISIBLE);
 
+        // Iniciamos un timer para la carga de la pantalla inicial y pasado el tiempo carga el menú
         new CountDownTimer(3000, 1000) {
 
             public void onTick(long millisUntilFinished) {
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         }.start();
     }
 
-
+    // Método que carga el menú de la aplicación
     public void cargarMenu(){
         Intent i=new Intent(this,MenuLateral.class);
         startActivity(i);
