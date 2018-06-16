@@ -236,7 +236,8 @@ public class MenuLateral extends AppCompatActivity
                 new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-                        //finish();
+                        finishAffinity();
+                        System.exit(0);
                     }
                 });
 
@@ -251,10 +252,7 @@ public class MenuLateral extends AppCompatActivity
                     }
                 });
 
-        // Showing Alert Message
-
+        // Inflamos el dialog
         alertDialog.show();
-
     }
-
 }

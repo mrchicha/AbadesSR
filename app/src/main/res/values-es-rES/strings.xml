@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Abades Stone Race</string>
+    <string name="title_activity_menu__drawer">Abades Stone Race</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="cargando">Cargando...</string>
+    <string name="edicion">¡Bienvenidos a la 5ª edición!</string>
+    <string name="incripciones">Inscripciones abiertas</string>
+    <string name="incribir">Inscribirme en la carrera</string>
+
+    <string name="Pruebas">Pruebas</string>
+    <string name="Inscripciones">Inscripciones</string>
+    <string name="Resultados">Resultados</string>
+    <string name="Patrocinadores">Patrocinadores</string>
+    <string name="Patrocinadores_organizadores">Patrocinadores y organizadores</string>
+    <string name="informacion">Información</string>
+
+    <string name="Menu_Localizacion">Localización</string>
+    <string name="Localizar_dorsal">Localizar dorsal</string>
+    <string name="Activar_localizacion">Activar localización</string>
+    <string name="posicion_actual">Posición actual dorsal:</string>
+
+    <string name="dorsal_localizar">Indique el dorsal que quiere localizar</string>
+    <string name="dorsal_ubicacion">Indique su dorsal</string>
+
+    <string name="Menu_Salir">Otras opciones</string>
+    <string name="Salir">Salir de la aplicación</string>
+
+    <string name="inicio">Inicio</string>
+    <string name="Abades">Abades Stone race 43km</string>
+    <string name="Media">Media Stone race 21km</string>
+    <string name="Mini">Mini Stone race 13km</string>
+    <string name="Vertical">1/2 KM vertical 1,8km</string>
+
+    <string name="opcion1">opcion1</string>
+    <string name="opcion2">opcion2</string>
+    <string name="opcion3">opcion3</string>
+
+    <string name="menugps">Opciones GPS</string>
+    <string name="menu">Menú</string>
+
+    <string name="gps_inactvo">El GPS no está activo</string>
+    <string name="activar_gps">Activar el GPS desde el menú</string>
+
+    <string name="title_activity_scrolling_prueba">ScrollingActivityPrueba</string>
+
+    <string name="si">SI</string>
+    <string name="no">NO</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="mensajesalir">¿Salir de la aplicación?</string>
+    <string name="confirmarsalir">¿Está seguro de que desea salir de la aplicación?</string>
+    <string name="nodorsal">El dorsal seleccionado no está compartiendo su ubicación</string>
+    <string name="nohaydorsal">El dorsal seleccionado no existe</string>
+
+    <string name="clasificado">Clasificado nº:</string>
+    <string name="dorsal">Dorsal:</string>
+    <string name="nombre">Nombre:</string>
+
+    <string name="avituallamientos">Avituallamientos</string>
+    <string name="perfil">PERFIL DEL RECORRIDO:</string>
+    <string name="descripcion43">
+        "DESCRIPCIÓN STONE RACE:\n\n"
+        "Distancia: 43 km.\n"
+        "Dificultad técnica: Media – Alta\n"
+        "Entorno: Sierra de Loja y Monte Hacho\n"
+        "Salida: Área de servicio Abades Loja\n"
+        "Llegada: Estadio Medina Lauxa\n"
+        "Elevación acumulada positiva: 2.570 m\n"
+        "Cota superior: 1614 m. Sierra de Loja\n"
+        "Cuotas de inscripción:\n"
+        "Federados y No federados: 25 €\n"
+    </string>
+    <string name="descripcion23">
+        "DESCRIPCIÓN MEDIA STONE:\n\n"
+        "Distancia: 23 km.\n"
+        "Dificultad técnica: Media – Alta\n"
+        "Entorno: Sierra de Loja\n"
+        "Salida: Área de servicio Abades Loja\n"
+        "Llegada: Estadio Medina Lauxa\n"
+        "Elevación acumulada positiva: 1.265 m\n"
+        "Cota superior: 1500 m. Sierra de Loja\n"
+        "Cuotas de inscripción:\n"
+        "Federados y No federados: 18 €\n"
+    </string>
+    <string name="descripcion13">
+        "DESCRIPCIÓN MINI STONE:\n\n"
+        "Distancia: 13 km.\n"
+        "Dificultad técnica: Baja – Media\n"
+        "Entorno: Sierra de Loja\n"
+        "Salida: Área de servicio Abades Loja\n"
+        "Llegada: Estadio Medina Lauxa\n"
+        "Elevación acumulada positiva:\n"
+        "Cota superior: 1049 m. Sierra de Loja\n"
+        "Cuotas de inscripción:\n"
+        "Federados y No federados: 18 €\n"
+    </string>
+    <string name="descripcionmedio">
+        "DESCRIPCIÓN 1/2 KM VERTICAL:\n\n"
+        "Distancia: 1.8 km.\n"
+        "Dificultad técnica: Media\n"
+        "Entorno: Sierra de Loja\n"
+        "Salida: Área de servicio Abades Loja\n"
+        "Llegada: Punto más alto\n"
+        "Elevación acumulada positiva: 485 m\n"
+        "Cota superior: 1044 m.\n"
+        "Cuotas de inscripción:\n"
+        "• Gratis con la inscripción en cualquier modalidad.\n"
+        "• Solo para el Stone ½ Km Vertical: 5 €\n"
+    </string>
+    <string name="presentacion">
+        "PRESENTACION DE LA CARRERA\n\n"
+        "Aprovechando el medio rural y el entorno paisajístico en el "
+        "que se encuentran ubicadas las zonas rurales del municipio "
+        "de Loja y dado el auge que están teniendo las carreras de "
+        "montaña, queremos dar vida a este proyecto y a los que "
+        "surjan en esta disciplina.\n\n"
+        "Nuestro objetivo es potenciar este deporte de dos formas: Una competitiva con cuatro recorridos: 41 Km Maratón Stone, otro de 23 Km Media Stone, uno corto de 13 Km Mini Stone y el 1⁄2 Kilómetro vertical, la otra altruista-lúdica, ya que paralela al minitrail se hará una marcha de montaña (la marcha no será competitiva) aprovechando parte del itinerario de la misma, siempre y cuando no dificulten el paso de corredores y entre ambas no se entorpezcan ni se cree un peligro inminente entre los participantes. También tendrá un formato turístico, ya que la prueba pasará por distintos puntos geográficos de la localidad donde se desarrolle; extendiéndose la prueba aproximadamente entre 10 y 50 Km. y dará a conocer a todos los participantes nuestro entorno y otros valores del mismo.\n\n"
+        "La fecha de la carrera, serán los días 4 y 5 de noviembre. Será sábado tarde a las 16.00 horas en el que se disputará el kilómetro vertical y domingo por la mañana, desde las 8:30 hasta las 17.30 que se estima la llegada del último participante de la carrera más larga, dependiendo de la climatología y las diferentes distancias se establecerán unos horarios y controles organizativos, tanto de carrera como logísticos, para el buen desarrollo de la misma.\n\n"
+        "Para cumplir con estos objetivos es necesario una correcta organización y gestión del evento, y eso pasa por controlar todos los aspectos que lo caracterizan: el marketing, la logística, la parte económica-legal, las infraestructuras tanto interiores como exteriores que hacen falta, el personal técnico necesario, etc.\n\n"
+        "La experiencia de las ediciones anteriores y la implicación de nuestro club junto al Excelentísimo Ayuntamiento de Loja nos permiten organizar esta carrera con las máximas garantías de éxito y con la casi absoluta seguridad de que seremos capaces de prever todas las circunstancias que lo envuelven para que su desarrollo sea lo más perfecto posible.\n\n"
+        "Tras esta pequeña contextualización pasamos a detallar los aspectos organizativos:\n\n"
+        "LOJA Y LA SIERRA DE LOJA\n\n"
+        "Loja se enclava en la parte occidental de la provincia de Granada (Comunidad Autónoma de Andalucía), formando parte de la comarca del Poniente Granadino y limitando con las provincias de Málaga y Córdoba. Se sitúa a pie a la Autovía A-92, Km. 192, (CN-342), eje principal de comunicación de Andalucía, por la que hoy día se realizan la mayoría de los desplazamientos dentro de nuestra Comunidad Autónoma, lo que permite que desde las capitales de provincias más lejanas no se empleen más de tres horas en llegar a la ciudad.\n\n"
+        "El municipio de Loja con sus más de 450 km2, cobija un territorio diverso en paisaje. Montañas, cerros, montes, riberas, sotos, ríos y campos, constituyen un mosaico natural y cultural que conforman la estructura de nuestra ciudad. Estos paisajes además albergan una rica diversidad viva, formada por multitud de especies de plantas y animales que encuentran aquí, en Loja, un lugar ideal para vivir y acompañarnos en el devenir cotidiano. No hay que olvidar las formidables estructuras y formaciones geológicas con las que la creación regaló a este trozo del Poniente Granadino: sierras kársticas, meandros, barrancos, arroyos, vegas etc…\n\n"
+        "La sierra de Loja, desde cuyos miradores se divisan vistas panorámicas de la comarca, es el hábitat de rapaces, cabra y gato montés o gallipato, especie endémica ésta última que se puede observar en el Charco del Negro. Posee numerosas cavidades, fracturas y cuevas verticales en la roca (como la conocida Cueva Horadada), idóneas para la práctica de la espeleología, deporte de aventura al que se suman otros como el senderismo o el vuelo libre con sus dos despegues. Es posible visitar además el Parque Eólico.\n\n"
+        "PATROCINADORES DE LA CARRERA\n\n"
+        "Su participación será económica, en acciones de la prueba o el intercambio de material. Todos los patrocinadores serán publicados en la pág. Web de la prueba, medios de comunicación y prendas patrocinadas, también podrán poner su publicidad en vallas, trípticos y trofeos. En el caso de que algún patrocinador solicite publicidad adicional propia para el día de la prueba, será con previo aviso al comité de la organización de la misma.\n\n"
+        "La prenda técnica será serigrafiada con los patrocinadores principales de la prueba, Anagrama de la prueba, etc.\n\n"
+        "INSCRIPCIONES\n\n"
+        "a) Base Deportes Open.\n\n"
+        "b) www. abadesstonerace.com, por medio de pasarela bancaria\n\n"
+        "c) Se abrirá una fecha de inscripción y otra de cierre publicadas en todos los medios que utilizaremos para promocionar la carrera.\n\n"
+        "*NOTA: Todas las inscripciones irán acompañadas del justificante bancario del ingreso de la prueba e indicando en el mismo la modalidad de participación marcha/carrera y los datos que la organización estime oportunos.\n\n"
+        "SEGURO DE LA PRUEBA\n\n"
+        "Se contratará el seguro de responsabilidad civil para la prueba, seguro de corredores y licencias obligatorias para la carrera.\n\n"
+        "Seguridad\n\n"
+        "La seguridad será establecida por Policía Local, Protección Civil, personal del ayuntamiento, Cruz Roja, personal sanitario y voluntariado. Se harán tres planes de emergencia que conocerán cada uno de los miembros encargados de velar por la seguridad de participantes y viandantes de la prueba.\n\n"
+        "a) Emergencia de evacuación.\n"
+        "b) Emergencia de asistencia médica.\n"
+        "c) Emergencia de búsqueda.\n"
+        "Los planes de emergencia se confeccionarán en conjunto todos los miembros de voluntariado y profesionales de los mismos. Se mantendrá reuniones periódicas y asignaciones distintas.\n\n"
+        "COLABORADORES EN EL TRANSCURSO DE LA PRUEBA\n\n"
+        "Al igual que en el apartado anterior (2.4), pero solamente en los avituallamientos, puntos de control de carrera, trayectos peligrosos y cruces conflictivos.\n\n"
+        "ALOJAMIENTOS\n\n"
+        "En el caso que se necesiten alojamientos para corredores, invitados u otro personal que lo solicite, tendremos previsto la contratación por cuenta ajena de pensiones u hoteles lo más cercanos al lugar de la prueba a precios asequibles.\n\n"
+        "CONTROLES DE PASO, SALIDA Y META\n\n"
+        "Será realizado por personal colaborador, personal cualificado con cronometraje oficial o chip. Estarán ubicados en lugares estratégicos.\n\n"
+        "Habrá tantos controles como estime la organización.\n\n"
+        "AVITUALLAMIENTOS\n\n"
+        "Estarán formados por personal voluntario y suministrados por nuestros colaboradores. Serán atendidos por dos miembros del voluntariado y ubicados aproximadamente cada 5 Km. Intercalados en avituallamientos líquidos y sólidos. Los líquidos estarán provistos de agua y bebida isotónica y los avituallamientos sólidos con frutas, chocolatinas, frutos secos, agua, etc.\n\n"
+        "DUCHAS E HIGIENE\n\n"
+        "Se dispondrán de las duchas, vestuarios y w.c del Pabellón Alfeia y si fueran necesarios por el volumen también pondríamos a disposición los vestuarios del Estadio Municipal la Joya. En la zona de salida se dispondrán de los aseos del Área de Servicio Abades.\n\n"
+        "SERVICIO MÉDICO\n\n"
+        "Habrá un servicio médico compuesto por dos médicos y dos ambulancias durante y después de la prueba. Durante la prueba atenderá las urgencias que conlleven un riesgo para la salud del participante y certificará la retirada inmediata de la prueba de aquel que presente signos de una anomalía en su salud. Su ubicación será en puntos estratégicos de carrera y tendrá movilidad permanente mediante transporte en quad, moto o todo terreno, igualmente contaremos con una empresa especializada “Cardiosport” que insertará corredores – personal sanitario con desfibriladores portátiles – que harán la carrera con la finalidad de atender a los corredores con la mayor brevedad posible en caso de alguna incidencia. En la sierra de Loja se instalará un hospital de campaña cedido por Cruz Roja y en la llegada, junto al arco de meta disponemos del Hospital de la ciudad.\n\n"
+        "Paralelo al servicio médico, habrá un servicio de masajes que se encargará de las molestias y masaje deportivo, así como un servicio de podología a disposición del participante que lo solicite.\n\n"
+        "ANIMACIÓN FESTIVA ANTES, DURANTE Y DESPUÉS DE LA PRUEBA\n\n"
+        "Se contratará un “speaker”, José María Muñoz Yepes. Será realizada mediante unos equipos de sonido. Se ofrecerá una comida a todos los asistentes al evento deportivo, tanto participantes como colaboradores y patrocinadores, será gratuita y empezará durante la entrega de premios.\n\n"
+        "Se contratará una barra de bar con empresa especializada para ofrecer tanto a participantes, colaboradores, patrocinadores y publico en general la posibilidad de consumir durante la fiesta y entrega de trofeos.\n\n"
+        "También se realizará un sorteo de regalos entre todos los participantes.\n\n"
+        "CARACTERÍSTICAS GENERALES DE LA CARRERA\n\n"
+        "Tras haber realizado la contextualización del lugar donde se realizará la carrera pasamos a detallarla más específicamente.\n\n"
+        "La IV edición de la Abades Loja Stone Race discurre por la Sierra de Loja, por espacios de gran belleza que muestran una clara visión de la biodiversidad existente en la zona.\n\n"
+        "RECORRIDO, DESCRIPCIÓN Y PERFILES\n\n"
+        "El recorrido será realizado por la organización de la prueba, con las mediciones técnicas, tanto en distancias como en altitudes. El recorrido de carrera será visible tanto en condiciones climatológicas buenas como adversas; también se adicionará un recorrido secundario por si el principal no se pudiera llevar al cabo. Para confeccionar el balizaje del recorrido se hará de una forma clara, que no de confusiones y se regirán por pautas distintas.\n\n"
+        "MARCAJES O BALIZAMIENTOS DEL ITINERARIO\n\n"
+        "Estos tendrán la misión de indicarnos el recorrido de prueba y en zonas confusas se colocarán de tal forma que la última marca que preceda a la siguiente se vea de forma clara. Los balizamientos se harán con cintas publicitarias de los patrocinadores que las suministren, estacas pintadas de naranja o verde fosforito y marcas sobre el terreno.\n\n"
+        "TIEMPOS DE PASOS EN CONTROLES Y AVITUALLAMIENTOS, DESNIVELES, ALTITUDES Y DISTANCIAS PARA UNA PREVISIÓN DE CARRERA.\n\n"
+        "Son datos técnicos que la organización realizará previos junto el itinerario elegido. Con estos datos nos acercaremos a los tiempos reales de paso y control en que los participantes completarán la carrera. También los dividiremos en sectores o zonas para tener una mayor coordinación con otros equipos, bien sean de seguridad, avituallamientos, limpieza, etc.\n\n"
+        "COBERTURAS DE RADIO Y TELEFONÍA.\n\n"
+        "Todos los grupos de voluntariado, seguridad, emergencia, etc., estarán comunicados entre si por radio o móvil y éstos a su vez con una base situada a pie de meta. Serán los encargados de darnos toda la información en tiempo real, tanto de carrera como las posibles incidencias en el transcurso de la misma. Para ello se realizarán todas las pruebas necesarias de cobertura. Para la edición de este año Mala Cara Club Running ha adquirido seis terminales de radiofrecuencia “walkie talkie” para mejorar la comunicación de la organización.\n\n"
+        "PERMISOS DE LOS TERRENOS POR LOS QUE SE TRANSITARÁ EN LA PRUEBA.\n\n"
+        "Siempre y cuando algunos trazados del itinerario de la prueba transcurran por otros terrenos distintos a los de la Junta Vecinal, bien sean particulares o de otra Junta, se pedirán los permisos oportunos para evitar problemas de paso.\n\n"
+        "RECORRIDO RESERVA.\n\n"
+        "Si las inclemencias meteorológicas u otros factores hicieran impracticable el primer recorrido o pongan en peligro la integridad física de los participantes asistentes a la prueba, tendríamos preparado un segundo recorrido con un itinerario lo más similar posible al primero para hacer posible la celebración de la carrera.\n\n"
+        "NOTA: La organización de la prueba se reserva el derecho de retrasar la salida de la prueba o de suspenderla cuando se den las causas ya mencionadas en este apartado y en los dos recorridos.\n\n"
+        "SUPERVISIÓN DE LOS ITINERARIOS.\n\n"
+        "Se realizarán desde quince días antes de la prueba, un día antes y el día de la misma. El objetivo de las supervisiones, es el de revisar el recorrido y comprobar que todo está perfecto para el comienzo de la prueba, es decir, desde los marcajes, climatología, estado del terreno y todo aquello que pudiera contraer nefastos contratiempos.\n\n"
+        "NÚMERO DE PARTICIPANTES\n\n"
+        "Senderismo: 250 participantes Mini Stone: 150 participantes Media Stone: 200 participantes Maraton Stone: 100 participantes.\n\n"
+        "HORARIOS DE SALIDA Y ENTREGAS DE DORSALES\n\n"
+        "La carrera se celebrara el domingo, los días 4 y 5 de noviembre desde el Área de Servicio de Abades.\n\n"
+        "La salida se realizará desde el área de servicio Abades la meta de la carrera tendrá lugar en el Pabellón Alfeia en las inmediaciones del Complejo Deportivo La Joya.\n\n"
+        "HORARIO ENTREGA DORSALES\n\n"
+        "Los dorsales se podrán retirar hasta cuando estimase oportuno la organización antes de la prueba en el Pabellón Municipal u otro local del que se disponga y en su defecto, hasta media hora antes el mismo día de la prueba en cada modalidad.\n\n"
+        "Sábado- 10:00 a 13:00h y 17:00 a 20:00 h y Domingo- mismo día de la prueba hasta las 9:00h.\n\n"
+        "La Salida de la prueba será a las 8:00 horas para el Maratón, 9.00 para la Media Stone y 9.30 para el resto de pruebas.\n\n"
+        "LISTADO DE CLASIFICACIONES Y PREMIOS.\n\n"
+        "El listado de clasificaciones será expuesto para todos los participantes en cuanto finalice la prueba y será confeccionado según las categorías y premios predeterminados por la organización:\n\n"
+        "TROFEOS\n\n"
+        "Trofeo para los 3 primeros clasificados de cada categoría.\n\n"
+        "Para optar al premio en las distintas categorías se pedirá la documentación necesaria que lo acredite, a si como absoluto local, tiene que constar haber nacido en el pueblo ó estar empadronado por lo menos desde hace un año (se pedirá D.N.I. ó acreditación oficial que lo demuestre).\n\n"
+        "LIMPIEZA DEL ITINERARIO.\n\n"
+        "Al paso del último participante de carrera por el primer control o puesto de avituallamiento (lo que antes le preceda) se desmontarán todos los puestos escalonadamente al igual que las marcas que hemos utilizado para el balizamiento del itinerario a seguir por los participantes hasta llegar a la meta.\n\n"
+        "REGLAMENTO\n\n"
+        "El reglamento para la IV Carrera de Montaña de Loja se encuentra en www.abadesstonerace.com\n\n"
+        "CATEGORÍAS DE COMPETICIÓN\n\n"
+        "Los participantes estarán divididos en las siguientes categorías de Competición:\n"
+        "Cadete: 15, 16 y 17 años, es decir, que no cumplan los 18 años el año de referencia."
+        "Júnior: 18, 19 y 20 años, es decir, que no cumplan los 21 años el año de referencia."
+        "Absoluta: a partir de 21 años cumplidos el año de referencia.\n\n"
+        "Subcategorías:"
+        "Promesa: 21, 22 y 23 años, es decir, que no cumplan los 24 años el año de referencia.\n"
+        "Sénior (de 24 a 39 años cumplidos el año de la competición)."
+        "Veteranos/as (de 40 a 50 cumplidos el año de la competición)."
+        "Máster (de 51 en adelante cumplidos el año de la competición).\n\n"
+        "LOGISTICA PRINCIPAL DEL EVENTO DEPORTIVO\n\n"
+        "Los controles de salida y entrada en meta se llevaran a cabo por la empresa especializada en cronometraje deportivo.\n\n"
+        "Se utilizará una de las tecnologías más modernas del mercado, tecnología chip. El objetivo principal es dotar al organizador de un sistema de cronometraje rápido, versátil y eficaz que permite obtener las clasificaciones del evento a tiempo real.\n\n"
+        "La organización tiene previsto utilizar el Pabellón Multiusos Alfeia de la población en la Av. Tierno Galván para dar servicio de vestuarios y duchas que los participantes podrán utilizar cómodamente, tanto del pabellón como si fuera necesario del Estadio Municipal La Joya. Como parking la organización dispone de los solares que ahí ubicados a ambos lados de la Av. Tierno Galván y que tendrán entrada y salida por calles ajenas al recorrido de la carrera.\n\n"
+        "La organización contara con numerosos voluntarios cubriendo la totalidad de tareas necesarias para la realización de este evento deportivo.\n\n"
+        "Tareas: entrega dorsales, avituallamientos, control de accesos, servicios de música y fotografía, animación…\n\n"
+        "Por último, se elaborará un blog exclusivo de la IV Carrera de Montaña de Loja que ofrecerá toda la información de la carrera ya que Internet es la vía de difusión de información más potente en la actualidad y todo evento deportivo debe disponer de esta herramienta para dar calidad al mismo y abrirse a la mayor cantidad de público posible.\n\n"
+        "PATROCINADORES Y COLABORADORES\n\n"
+        "Una de las fuentes de financiación del deporte y, sobretodo, de los acontecimientos deportivos es el patrocinio. De esta forma para llevar a cabo un evento de estas características se necesita de la ayuda de determinados patrocinadores que permitan que el evento se haga más viable a nivel económico y sea un punto de influencia para que la gente conciba la carrera como un evento de cierto nivel con el respaldo de patrocinadores importantes que apuestan por esa prueba y en definitiva por el deporte.\n\n"
+        "El Ayuntamiento de Loja ofrece una importantísima labor en el deporte del municipio, por lo que estará presente como organizador este evento deportivo.\n\n"
+        "REPERCUSIÓN INTERNA AL PUEBLO DE LOJA\n\n"
+        "Una de las principales ideas que tienen presente los directores organizadores de este evento deportivo es que sea beneficioso para el municipio, tanto en ámbito económico, social como cultural. De esta forma se intenta que se involucre todo el pueblo y se viva como un acontecimiento deportivo que muestre la ilusión de Loja por realizar eventos importantes que atraigan a turistas, y se pueda convertir en un referente en próximos años.\n\n"
+        "Una función muy importante de los comercios del pueblo es su participación como colaboradores de la carrera, y por otra parte la colaboración de diversas asociaciones deportivas o no, para ayudar en las tareas que se crean convenientes desde la organización.\n\n"
+        "Así mismo, gente del pueblo que nos brinde su ayuda para realizar diferentes tareas como (dj, speaker, entrega dorsales, avituallamientos, señalización de recorridos, etc.).\n\n"
+        "Por otra parte muchos aficionados del pueblo al deporte, en especial al running, ven la carrera como un estímulo para entrenarse y disfrutar del deporte recorriendo la Sierra de la Loja.\n\n"
+        "REPERCUSIÓN EXTERNA\n\n"
+        "No solo la carrera va a tener repercusión interna en el pueblo si no que también se extiende a poblaciones cercanas. Comercios y empresas externas participaran colaborando y mostrando interés por el deporte.\n\n"
+        "Así mismo, muchos corredores estarán interesados en participar y poder disfrutar de la sierra que siempre han tenido tan cerca pero nunca se han decidido recorrer por desconocimiento de la misma.\n\n"
+        "ASPECTOS LEGISLATIVOS VARIOS\n\n"
+        "Para llevar a cabo la celebración de un evento deportivo es necesario controlar todo el ámbito de legalidad al respecto. No hay que olvidar los permisos y requisitos legales y formales que son exigidos por la normativa legal vigente para la celebración de espectáculos públicos o actividades recreativas, y en este caso de un evento deportivo como la IV Carrera de Montaña de Loja.\n\n"
+        "En el caso que nos acomete entendemos por legislación un conjunto de leyes o normas que regulan el evento que se pretende organizar. Es fundamental conocer y aplicar la parte legal del evento en cuestión para evitarse problemas que pueden convertirse en un auténtico rompecabezas e incluso poder llegar a afectar a la posibilidad de celebración del evento o de su suspensión.\n\n"
+        "Por lo tanto, para celebrar un evento son necesarios una serie de requisitos.\n\n"
+        "El primero de ellos es la documentación necesaria, donde figuran los permisos, las licencias y los contratos de los cuales van a depender casi todas las relaciones comerciales y la realización real del evento.\n\n"
+        "Además también son muy importantes los seguros, para intentar cubrir todos los imprevistos y siniestros posibles que puedan acontecer, y garantizar por todos los medios la seguridad de las personas y, también, los bienes. La prueba estará cubierta por un Seguro de Responsabilidad Civil y de accidentes que cubrirá a todos los participantes inscritos.\n\n"
+        "Cuanto al tema de Seguridad se llevará a cabo por parte de la Policía Local de Loja la cuál dispondrá de los elementos de seguridad necesarios para esta labor. Por otra parte se dispondrá de los servicios médicos y ambulancia de la Cruz Roja.\n\n"
+        "Respecto a la parte de control sanitario se hará dotación de una cantidad de sanitarios suficientes y equipados. Se procurará disponer de fuentes de agua potable. Mayor rigor en cuanto a la calidad y las condiciones de presentación y acondicionamiento de los alimentos que se ofrecen para el consumo en los avituallamientos.\n\n"
+        "PROPUESTA PARA LA NUEVAS EDICIÓNES\n\n"
+        "Una vez terminado un evento deportivo es necesario realizar un análisis y extraer conclusiones de cómo ha salido todo. Esta tarea corresponde a los directivos organizadores que tras estudiar el evento deciden si ha sido positiva la realización del mismo y presentan nuevas ideas y propuestas para que las próximas ediciones sean de mayor calidad organizativa y también deportiva.\n\n"
+        "Este proceso de mejora se tendrá muy presente dentro de la organización de la Carrera de Montaña de Loja.\n\n"
+    </string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_pruebas">Pruebas</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_menu_lateral">Abades Stone Race</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+</resources>
