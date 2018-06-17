@@ -87,16 +87,24 @@ public class ActivarLoc extends AppCompatActivity {
     // Método que añade ubicación al mapa y sube los datos a la base de datos
     public void ubicacion() {
 
-        // permisos location manager
+        // Permisos location manager
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED ) {
             if(ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.ACCESS_FINE_LOCATION)){
+                // Si se quiere que el permiso sea solicitado cada vez
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                        MI_RESULTADO);
             }
             else{
-                ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, MI_RESULTADO);
+                // Pide el permiso para usar el GPS
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                        MI_RESULTADO);
             }
             return;
         }
+
 
         // Definición e instancia del objeto location manager
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -215,8 +223,9 @@ public class ActivarLoc extends AppCompatActivity {
                 }
                 else {
                     //permiso denegado
+                    Toast.makeText(getApplicationContext(),getString(R.string.permisodenegado),Toast.LENGTH_LONG).show();
+                    finish();
                 }
-
                 return;
             }
         }
