@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -50,12 +51,13 @@ public class ActivarLoc extends AppCompatActivity {
     private LocationManager locationManager;
     private String dorsalLoc;
     private boolean gpsActivo;
-    static final int MI_RESULTADO = 0;
+    static final int MI_RESULTADO = 99;
     private static RequestQueue requestQueue;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         //handle permissions first, before map is created. not depicted here
 
 
@@ -84,7 +86,6 @@ public class ActivarLoc extends AppCompatActivity {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED ) {
             if(ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.ACCESS_FINE_LOCATION)){
-
             }
             else{
                 ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, MI_RESULTADO);
@@ -95,10 +96,8 @@ public class ActivarLoc extends AppCompatActivity {
         // Definición e instancia del objeto location manager
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
-        try{
-            gpsActivo = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        try{gpsActivo = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
         }catch (Exception e){}
-
 
         if(gpsActivo) {
 
@@ -107,7 +106,7 @@ public class ActivarLoc extends AppCompatActivity {
             // Llama al método de actualizar la ubicación con el objeto location
             actualizarUbicacion(location);
 
-            // Pide la actualización de la ubicación al objeto location manager cada 10 segundos, con 20 metros de distancia mínima
+            // Pide la actualización de la ubicación location manager cada 10 segundos, con 20 metros de distancia mínima
             // y usando el listener del location manager
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,10000,20,locationListener);
         }
@@ -159,8 +158,11 @@ public class ActivarLoc extends AppCompatActivity {
         startMarker.setIcon(getResources().getDrawable(R.drawable.marcadordeposicion));
         startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
         map.getOverlay().clear();
+        map.invalidate();
+
+
         map.getOverlays().add(startMarker);
-        //map.invalidate();
+
     }
 
     // Listener que detecta cuando cambia la ubicación y si es así llama al método que
@@ -195,6 +197,7 @@ public class ActivarLoc extends AppCompatActivity {
 
                 if(grantResults.length > 0 && grantResults[0]==PackageManager.PERMISSION_GRANTED){
                     //permiso concedido
+                    peticionVolley(dorsalLoc);
                 }
                 else {
                     //permiso denegado

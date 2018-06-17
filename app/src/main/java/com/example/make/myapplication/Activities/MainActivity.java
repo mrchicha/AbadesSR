@@ -24,22 +24,14 @@ public class MainActivity extends AppCompatActivity {
 
         // Iniciamos un timer para la carga de la pantalla inicial y pasado el tiempo carga el menú
         new CountDownTimer(3000, 1000) {
-
-            public void onTick(long millisUntilFinished) {
-
-            }
-
+            public void onTick(long millisUntilFinished) {}
             public void onFinish() {
                 cargarMenu();
             }
-
         }.start();
 
         new CountDownTimer( 2000,1000){
-            public void onTick(long millisUntilFinished) {
-
-            }
-
+            public void onTick(long millisUntilFinished) {}
             public void onFinish() {
                 textView.setVisibility(View.VISIBLE);
             }

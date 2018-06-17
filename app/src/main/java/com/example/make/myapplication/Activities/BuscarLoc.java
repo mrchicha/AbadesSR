@@ -3,6 +3,7 @@ package com.example.make.myapplication.Activities;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.pm.ActivityInfo;
 import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -41,20 +42,16 @@ public class BuscarLoc extends AppCompatActivity {
 
     @Override public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-        //handle permissions first, before map is created. not depicted here
 
         //load/initialize the osmdroid configuration, this can be done
         Context ctx = getApplicationContext();
         Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
-        //setting this before the layout is inflated is a good idea
-        //it 'should' ensure that the map has a writable location for the map cache, even without permissions
-        //if no tiles are displayed, you can try overriding the cache path using Configuration.getInstance().setCachePath
-        //see also StorageUtils
-        //note, the load method also sets the HTTP User Agent to your application's package name, abusing osm's tile servers will get you banned based on this string
 
-        //inflate and create the map
+        // Inflamos el mapa
         setContentView(R.layout.activity_act_localizacion);
 
         // Seleccionamos el mapa y el tipo de capa a mostrar
@@ -68,15 +65,18 @@ public class BuscarLoc extends AppCompatActivity {
         switch (i){
             case 0:
                 // Abades stone
-                cargaMap(37.15637,-4.2067,"http://www.2654420-1.web-hosting.es/abades433.kml", getString(R.string.inicio) + " " + getString(R.string.Abades));
+                cargaMap(37.15637,-4.2067,"http://www.2654420-1.web-hosting.es/abades433.kml",
+                        getString(R.string.inicio) + " " + getString(R.string.Abades));
                 break;
             case 1:
                 // Media stone
-                cargaMap( 37.160249, -4.189244,"http://www.2654420-1.web-hosting.es/mediastone.kml", getString(R.string.inicio) + " " + getString(R.string.Media));
+                cargaMap( 37.160249, -4.189244,"http://www.2654420-1.web-hosting.es/mediastone.kml",
+                        getString(R.string.inicio) + " " + getString(R.string.Media));
                 break;
             case 2:
                 // Mini stone
-                cargaMap(37.171537,-4.154954,"http://www.2654420-1.web-hosting.es/abadesministonerace.kml", getString(R.string.inicio) + " " + getString(R.string.Mini));
+                cargaMap(37.171537,-4.154954,"http://www.2654420-1.web-hosting.es/abadesministonerace.kml",
+                        getString(R.string.inicio) + " " + getString(R.string.Mini));
                 break;
             case 3:
                 // Km vertical
@@ -166,10 +166,7 @@ public class BuscarLoc extends AppCompatActivity {
 
         // Cargamos el documento kml, si lo hay y lo añadimos al mapa
         KmlDocument kmlDocument = new KmlDocument();
-        if(!rutaKML.equals(""))
-        {
-            kmlDocument.parseKMLUrl(rutaKML);
-        }
+        if(!rutaKML.equals("")){kmlDocument.parseKMLUrl(rutaKML);}
 
         FolderOverlay kmlOverlay = (FolderOverlay)kmlDocument.mKmlRoot.buildOverlay(map, null, null, kmlDocument);
         map.getOverlays().add(kmlOverlay);

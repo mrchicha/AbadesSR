@@ -26,9 +26,9 @@ import com.example.make.myapplication.fragments.MedioVertical;
 import com.example.make.myapplication.fragments.MiniStoneRace;
 import com.example.make.myapplication.fragments.Patrocinadores;
 
-public class MenuLateral extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MenuLateral extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private FragmentManager fragmentmanager = getSupportFragmentManager();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -165,11 +165,13 @@ public class MenuLateral extends AppCompatActivity
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
+
     public void cargarCocacolaPatrocinador(View v){
         Uri uri = Uri.parse("https://www.cocacola.es/es/home/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
+
     public void cargarPoweradePatrocinador(View v){
         Uri uri = Uri.parse("https://www.powerade.com/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -181,6 +183,7 @@ public class MenuLateral extends AppCompatActivity
         i.putExtra("fragment",0);
         startActivity(i);
     }
+
     public  void cargaMapMedia(View view){
         Intent i=new Intent(this,BuscarLoc.class);
         i.putExtra("fragment",1);
