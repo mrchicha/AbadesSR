@@ -10,10 +10,12 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
@@ -40,6 +42,8 @@ import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.Marker;
 
+import java.util.ArrayList;
+
 
 public class ActivarLoc extends AppCompatActivity {
 
@@ -48,6 +52,7 @@ public class ActivarLoc extends AppCompatActivity {
     private IMapController mapController;
     private Marker startMarker;
     private GeoPoint startPoint;
+    private ArrayList<Marker> myMarkers = new ArrayList<>();
     private LocationManager locationManager;
     private String dorsalLoc;
     private boolean gpsActivo;
@@ -150,19 +155,28 @@ public class ActivarLoc extends AppCompatActivity {
     // Método que recibe una latitud y una longitud y crea un geopoint
     // centra el mapa en el geopoint y determina las opciones del overlay del mapa
     public void agregarMarker(Double lat, Double lon) {
+
+        // Si ya hay un marcador en el mapa lo elimina
+        map.getOverlays().remove(startMarker);
+
+        // Instancia un  nuevo punto con los parámetros latitud y longitud que recibe el método
         startPoint = new GeoPoint(lat, lon);
 
+        // Centra el mapa en el punto creado
         mapController.setCenter(startPoint);
+
+        // Crea un nuevo marcador
         startMarker = new Marker(map);
+
+        // Le pasa el punto al marcador
         startMarker.setPosition(startPoint);
+
+        // Añade el icono al marcador y las propiedades
         startMarker.setIcon(getResources().getDrawable(R.drawable.marcadordeposicion));
         startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
-        map.getOverlay().clear();
-        map.invalidate();
 
-
+        // Añade el marcador a la capa del mapa
         map.getOverlays().add(startMarker);
-
     }
 
     // Listener que detecta cuando cambia la ubicación y si es así llama al método que
