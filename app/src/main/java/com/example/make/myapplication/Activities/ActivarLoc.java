@@ -52,7 +52,6 @@ public class ActivarLoc extends AppCompatActivity {
     private IMapController mapController;
     private Marker startMarker;
     private GeoPoint startPoint;
-    private ArrayList<Marker> myMarkers = new ArrayList<>();
     private LocationManager locationManager;
     private String dorsalLoc;
     private boolean gpsActivo;
@@ -63,8 +62,6 @@ public class ActivarLoc extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        //handle permissions first, before map is created. not depicted here
-
 
         Context ctx = getApplicationContext();
         Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
