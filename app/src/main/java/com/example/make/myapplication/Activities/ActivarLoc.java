@@ -85,32 +85,25 @@ public class ActivarLoc extends AppCompatActivity {
     public void ubicacion() {
 
         // Permisos location manager
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED ) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ) {
             if(ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.ACCESS_FINE_LOCATION)){
                 // Si se quiere que el permiso sea solicitado cada vez
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                        MI_RESULTADO);
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, MI_RESULTADO);
             }
             else{
                 // Pide el permiso para usar el GPS
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                        MI_RESULTADO);
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, MI_RESULTADO);
             }
             return;
         }
-
-
         // Definición e instancia del objeto location manager
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
-        try{gpsActivo = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        try{
+            gpsActivo = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
         }catch (Exception e){}
 
         if(gpsActivo) {
-
             Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 
             // Llama al método de actualizar la ubicación con el objeto location
@@ -129,14 +122,12 @@ public class ActivarLoc extends AppCompatActivity {
                     // TODO Auto-generated method stub
                     Intent myIntent = new Intent( getBaseContext(),MenuLateral.class);
                     startActivity(myIntent);
-                    //get gps
                 }
             });
             dialog.setNegativeButton(getString(R.string.cancelar), new DialogInterface.OnClickListener() {
 
                 @Override
                 public void onClick(DialogInterface paramDialogInterface, int paramInt) {
-                    // TODO Auto-generated method stub
                     finish();
                 }
             });
@@ -275,7 +266,6 @@ public class ActivarLoc extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.d("Log", "Error Respuesta en JSON: " + error.getMessage());
-
                     }
                 }
         );
@@ -327,13 +317,10 @@ public class ActivarLoc extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-
                         try {
                             Corredor corredor = CorredorImpl.corredorDorsal(response);
-
                             updateEnMovimiento(corredor.getDorsal(),"SI");
                             ubicacion();
-
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

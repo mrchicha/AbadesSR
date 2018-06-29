@@ -113,10 +113,8 @@ public class BuscarLoc extends AppCompatActivity {
                             if(corredor.getEnmovimiento().equalsIgnoreCase("si")){
                                 Double lon = Double.parseDouble(corredor.getLongitud());
                                 Double lat = Double.parseDouble(corredor.getLatitud());
-
                                 cargaMap(lat,lon,"", getString(R.string.posicion_actual)+ " " + dorsal);
                             }
-
                             // Si el dorsal no está compartiendo ubicación avisamoa al usuario y
                             // volvemos a pedir nuevamente el dorsal
                             else {
@@ -133,7 +131,6 @@ public class BuscarLoc extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.d("Log", "Error Respuesta en JSON: " + error.getMessage());
-
                         // Si la consulta devuelve un error al pedir un dorsal no existente
                         Toast.makeText(getApplicationContext(),getString(R.string.nohaydorsal),Toast.LENGTH_LONG).show();
                         pedirDorsal();
