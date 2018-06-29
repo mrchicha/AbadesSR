@@ -49,6 +49,7 @@ public class ActivarLoc extends AppCompatActivity {
 
     private MapView map = null;
 
+    //prueba
     private IMapController mapController;
     private Marker startMarker;
     private GeoPoint startPoint;
