@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Método que carga el menú de la aplicación
     public void cargarMenu(){
-        Intent i=new Intent(this,MenuLateral.class);
+        Intent i=new Intent(this,Login.class);
         startActivity(i);
         finish();
     }
