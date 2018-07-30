@@ -90,7 +90,7 @@ public class MenuLateral extends AppCompatActivity implements NavigationView.OnN
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        //Toggle item
+        //Opción Toggle item
         Menu menu = navigationView.getMenu();
         MenuItem menuItem = menu.findItem(R.id.app_bar_switch);
         MenuItem locDorsal = menu.findItem(R.id.nav_loc_dorsal);
