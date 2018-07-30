@@ -42,6 +42,7 @@
             android:textColor="@android:color/black" />
 
         <EditText
+            android:id="@+id/txtDni"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -72,7 +73,7 @@
             android:textColor="@android:color/black" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/txtdDorsal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -102,7 +103,7 @@
             android:textColor="@android:color/black" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/txtCorreo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -128,7 +129,7 @@
         app:layout_constraintVertical_bias="0.126">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btnConDorsal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -137,7 +138,7 @@
             android:textColor="@android:color/white" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnSinDorsal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/holo_red_dark"
@@ -146,9 +147,9 @@
     </LinearLayout>
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/chkRecordar"
         style="@style/Widget.AppCompat.CompoundButton.CheckBox"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -159,9 +160,9 @@
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintHorizontal_bias="0.653"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        app:layout_constraintVertical_bias="0.509" />
+        app:layout_constraintVertical_bias="0.521" />
 
 </android.support.constraint.ConstraintLayout>

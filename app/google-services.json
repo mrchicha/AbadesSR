@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:727271825680:android:6c1c7443919b8ffc",
         "android_client_info": {
-          "package_name": "com.example.make.myapplication"
+          "package_name": "com.mrchicha.make.myapplication"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "727271825680-179flsp26i3pf8b9mf4qmp2cfordbgjh.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.make.myapplication",
+            "package_name": "com.mrchicha.make.myapplication",
             "certificate_hash": "8f7d710d13ab10fc752f0349317076b5e5f2a686"
           }
         },
